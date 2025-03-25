@@ -1,0 +1,16 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+	<title>icon-ethereum-svg</title>
+	<style>
+		.s0 { fill: #627eea } 
+		.s1 { opacity: .6;fill: #ffffff } 
+		.s2 { fill: #ffffff } 
+		.s3 { opacity: .2;fill: #ffffff } 
+	</style>
+	<path id="Layer" class="s0" d="m48 96c-26.5 0-48-21.5-48-48 0-26.5 21.5-48 48-48 26.5 0 48 21.5 48 48 0 26.5-21.5 48-48 48z"/>
+	<path id="Layer" class="s1" d="m48 12v25.5l21 9.6z"/>
+	<path id="Layer" class="s2" d="m48 12l-21 35.1 21-9.6z"/>
+	<path id="Layer" class="s1" d="m48 63.7v17.3l21-29.8z"/>
+	<path id="Layer" class="s2" d="m48 81v-17.3l-21-12.5z"/>
+	<path id="Layer" class="s3" d="m48 59.7l21-12.6-21-9.6z"/>
+	<path id="Layer" class="s1" d="m27 47.1l21 12.6v-22.2z"/>
+</svg>

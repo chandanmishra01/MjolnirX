@@ -1,0 +1,125 @@
+.Leaderboard {
+  padding-top: 4.65rem;
+}
+
+.leaderboard-tab-container {
+  margin: 1.5rem auto 3.1rem auto;
+}
+
+.trophy-icon {
+    margin-right: 8px; /* Adjust the spacing as needed */
+  }
+
+.leaderboard-card {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: 2rem;
+  /* opacity: 0.9; */
+  max-width: 100rem;
+  background: var(--color-bg-panel);
+  /* background: #fefafa;light mode */
+  /* box-shadow: 0px 0.5rem 1.3rem #00000085; */
+  border: 1px solid rgba(255, 255, 255, 0.0784313725);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.leaderboard-card .title {
+  font-weight: 500;
+  font-size: 2.325rem;
+  line-height: 3.1rem;
+  color: #ffffff;
+  /* color: black;light mode */
+  padding: 0.775rem 0;
+  margin: 0;
+}
+.leaderboard-card .sub-title {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  letter-spacing: 0px;
+  color: #fff;
+  /* color: black;light mode */
+  margin-top: 1.1625rem;
+}
+.leaderboard-card .card-action {
+  margin-top: 3.1rem;
+  vertical-align: bottom;
+}
+
+.leaderboard-card .card-action input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* border: 1px solid #aaaaaa; light mode*/
+  font-size: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-right: 1.5rem;
+}
+
+.leaderboard-table-container {
+    margin-top: 2rem;
+    overflow-x: auto;
+  }
+  
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .leaderboard-table th {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-weight: 500;
+  }
+  
+  .leaderboard-table .glass-effect {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.3s ease;
+  }
+  
+  .leaderboard-table tr:hover .glass-effect {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .leaderboard-table .ownrecord {
+    background-color: rgba(255, 247, 183, 0.2);
+  }
+  
+  .leaderboard-table .trophy {
+    font-size: 18px;
+  }
+  
+  .leaderboard-table .rank-1 {
+    color: #ffd700;
+  }
+  
+  .leaderboard-table .rank-2 {
+    color: #c0c0c0;
+  }
+  
+  .leaderboard-table .rank-3 {
+    color: #cd7f32;
+  }
+  
+  .leaderboard-table .reward {
+    color: #ffd700;
+  }
+  
+  .leaderboard-table .diamond-icon {
+    color: #00ffff;
+  }
+
+  .masked-column {
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  }

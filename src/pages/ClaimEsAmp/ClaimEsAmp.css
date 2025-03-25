@@ -1,0 +1,117 @@
+.ClaimEsAmp input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ClaimEsAmp label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.ClaimEsAmp-content {
+  padding: 4.65rem;
+  padding-top: 1.5rem;
+  max-width: 38.75rem;
+}
+
+.ClaimEsAmp-row {
+  margin-bottom: 1.5rem;
+}
+
+.ClaimEsAmp button {
+  margin-top: 0.8rem;
+}
+
+.ClaimEsAmp-vesting-options .Checkbox.btn-lg {
+  font-size: 1.85rem;
+  margin-bottom: 0.8rem;
+  display: block;
+  width: 35.65rem;
+  padding-left: 1.85rem;
+  padding-top: 0.465rem;
+}
+
+.ClaimEsAmp-vesting-options .Checkbox.btn-lg.selected.arbitrum {
+  background: rgba(41, 160, 240, 0.2);
+}
+
+.ClaimEsAmp-vesting-options .Checkbox.btn-lg.selected.avalanche {
+  background: rgba(232, 65, 65, 0.2);
+}
+
+.ClaimEsAmp-vesting-options .Checkbox.btn-lg.selected.goerli {
+  background: rgba(100, 65, 65, 0.2);
+}
+
+.ClaimEsAmp-vesting-options .Checkbox.btn-lg.selected.base {
+  background: rgba(100, 65, 65, 0.2);
+}
+
+.ClaimEsAmp-vesting-options .Checkbox img {
+  height: 1.5rem;
+}
+
+.ClaimEsAmp-option-label {
+  display: inline-block;
+  width: 27.9rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.ClaimEsAmp-vesting-options .Checkbox.selected .ClaimEsAmp-option-label {
+  opacity: 1;
+}
+
+.ClaimEsAmp-vesting-options .Checkbox.arbitrum .Checkbox-icon.active {
+  color: #29a0f0;
+}
+
+.ClaimEsAmp-vesting-options .Checkbox.avalanche .Checkbox-icon.active {
+  color: #e84141;
+}
+
+.ClaimEsAmp-vesting-options .Checkbox.goerli .Checkbox-icon.active {
+  color: #40498d;
+}
+
+.ClaimEsAmp-vesting-options .Checkbox.base .Checkbox-icon.active {
+  color: #40498d;
+}
+
+.ClaimEsAmp button {
+  max-width: 35.65rem;
+}
+
+.ClaimEsAmp-input-label {
+  margin-bottom: 0.8rem;
+}
+
+.ClaimEsAmp input {
+  width: 35.65rem;
+}
+
+.ClaimEsAmp-input-container {
+  position: relative;
+}
+
+.ClaimEsAmp-max-button {
+  position: absolute;
+  padding: 0.465rem 0.8rem;
+  /* background: linear-gradient(90deg, rgba(45, 66, 252, 1) 0%, rgba(46, 61, 205, 1) 100%); */
+  background: #29316c;
+  left: 29.75rem;
+  top: 0.93rem;
+  font-size: 1.4rem;
+  border-radius: 3px;
+  z-index: 1;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ClaimEsAmp-max-button:hover {
+  color: rgba(255, 255, 255, 1);
+  /* background: linear-gradient(90deg, rgba(58, 78, 252, 1) 0%, rgba(51, 68, 222, 1) 100%); */
+  background: #29316c;
+}

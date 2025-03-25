@@ -1,0 +1,29 @@
+.card {
+  border: 1px solid #1e2136; 
+  /* border: 1px solid #1e213661;light mode */
+  border-radius: 2rem;
+  /* opacity: 0.9; */
+  background: var(--color-bg-panel); 
+  /* background: #fefafa;light mode */
+}
+
+.card-header {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem;
+}
+
+.card-divider {
+  height: 1px;
+  background: #ffffff14; 
+  /* background: #23263b61; */
+}
+.card-body {
+  padding: 1.5rem;
+}

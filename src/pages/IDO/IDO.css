@@ -1,0 +1,67 @@
+.buy-glp-content {
+    padding-top: 4.65rem;
+}
+
+.Buy-sell-blp .hero-section,
+.Buy-sell-blp .GlpSwap {
+    width: 1440px;
+    margin: 0 auto 20px auto;
+    padding: 0 112px;
+}
+
+.Buy-sell-blp .section-title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Buy-sell-blp .Page-title {
+    font-size: 48px;
+}
+
+.Buy-sell-blp .Page-description {
+    font-size: 15px;
+}
+
+.Buy-sell-blp .GlpSwap-stats-card {
+    background-color: #1a1b35;
+}
+
+.ido-go-back span {
+    color: #a0a3c4;
+    text-decoration-line: underline;
+    cursor: pointer;
+    &:hover {
+        color: #c1c3d7;
+    }
+}
+
+@media (max-width: 1450px) {
+
+    .Buy-sell-blp .hero-section,
+    .Buy-sell-blp .GlpSwap {
+        width: 1280px;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    .Buy-sell-blp .hero-section,
+    .Buy-sell-blp .GlpSwap {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1033px) {
+
+    .Buy-sell-blp .hero-section,
+    .Buy-sell-blp .GlpSwap {
+        padding: 0 1.6rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .Buy-sell-blp .section-title-icon {
+        display: none;
+    }
+}
