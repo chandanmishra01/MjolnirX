@@ -15,7 +15,7 @@ import { REFERRAL_CODE_KEY } from "config/localStorage";
 import { getProvider } from "lib/rpc";
 import { bigNumberify } from "lib/numbers";
 
-const ACTIVE_CHAINS = [PEGASUS, PHOENIX];
+const ACTIVE_CHAINS = [PUPPYNET];
 const DISTRIBUTION_TYPE_REBATES = "1";
 const DISTRIBUTION_TYPE_DISCOUNT = "2";
 
@@ -97,7 +97,7 @@ export function useUserCodesOnAllChain(account) {
   `;
   useEffect(() => {
     async function main() {
-      const [pegasusCodes, phoenixCodes] = await Promise.all(
+      const [puppynetCodes] = await Promise.all(
         ACTIVE_CHAINS.map((chainId) => {
           return getGraphClient(chainId)
             .query({ query, variables: { account: (account || "").toLowerCase() } })
@@ -106,17 +106,12 @@ export function useUserCodesOnAllChain(account) {
             });
         })
       );
-      const [codeOwnersOnPegasus = [], codeOwnersOnPhoenix = []] = await Promise.all([
-        getCodeOwnersData(PEGASUS, account, pegasusCodes),
-        getCodeOwnersData(PHOENIX, account, phoenixCodes),
+      const [codeOwnersOnPuppynet = []] = await Promise.all([
+        getCodeOwnersData(PUPPYNET, account, puppynetCodes),
       ]);
 
       setData({
-        [PEGASUS]: codeOwnersOnPegasus.reduce((acc, cv) => {
-          acc[cv.code] = cv;
-          return acc;
-        }, {}),
-        [PHOENIX]: codeOwnersOnPhoenix.reduce((acc, cv) => {
+        [PUPPYNET]: codeOwnersOnPuppynet.reduce((acc, cv) => {
           acc[cv.code] = cv;
           return acc;
         }, {}),

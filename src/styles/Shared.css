@@ -79,14 +79,19 @@ input {
   --color-pink-hover: #A5374F;
   --color-pink-hover-2: rgba(247, 107, 138, 0.10);
 
+  --color-yellow: #ef6401;
+  --color-yellow-hover: #bd4e01;
+
   --color-bg-page: #0E0E0E;
   --color-bg-panel: #151515;
 
   /* Home */
   --color-bg-home: #0E0E0E;
   --color-white: #FFFFFF;
-  --color-grey: #AFAFAF
+  --color-grey: #AFAFAF;
 }
+
+
 
 a {
   color: white;

@@ -47,7 +47,7 @@ import RewardRouter from "abis/RewardRouter.json";
 import Token from "abis/Token.json";
 
 import alp24Icon from "img/ic_alp.svg";
-import alp40Icon from "img/ic_alp.svg";
+import plp40Icon from "img/ic_plp.svg";
 import arrowIcon from "img/ic_convert_down.svg";
 
 import "./AlpSwap.css";
@@ -737,7 +737,7 @@ export default function AlpSwap(props) {
           <div className="App-card-title">
             <div className="App-card-title-mark">
               <div className="App-card-title-mark-icon">
-                <img src={alp40Icon} alt="alp40Icon" width="35px" height="35px" />
+                <img src={plp40Icon} alt="plp40Icon" width="35px" height="35px" />
                 {/* {chainId === BASE ? (
                   <img src={base16Icon} alt="base16Icon" className="selected-network-symbol" />
                 ) : (
@@ -1013,7 +1013,7 @@ export default function AlpSwap(props) {
           <div className="Page-description">
             <Trans>
               Fees may vary depending on which asset you use to buy ALP. <br />
-              Enter the amount of ALP you want to purchase in the order form, then check here to compare fees.
+              Enter the amount of PLP you want to purchase in the order form, then check here to compare fees.
             </Trans>
           </div>
         )}

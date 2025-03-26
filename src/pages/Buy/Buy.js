@@ -18,7 +18,7 @@ export default function BuyAMPALP() {
             </div>
             <div className="section-title-content">
               <div className="Page-title font-kufam">
-                <Trans>Buy AMP or ALP</Trans>
+                <Trans>Buy POE or PLP</Trans>
               </div>
             </div>
           </div>

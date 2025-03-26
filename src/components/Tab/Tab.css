@@ -28,7 +28,7 @@
 .Tab.block .Tab-option:hover {
   color: rgba(255, 255, 255, 1);
   /* background: linear-gradient(90deg, rgba(35, 57, 172, 1) 0%, rgba(43, 59, 147, 1) 100%); */
-  background: #5e404b; 
+  background: #773200; 
   /* background: #b81b55; */
   border-radius: 2rem;
 }
@@ -37,7 +37,7 @@
   opacity: 1;
   pointer-events: none;
   /* background: linear-gradient(90deg, rgba(45, 66, 252, 1) 0%, rgba(46, 61, 205, 1) 100%); */
-  background: var(--color-pink); 
+  background: var(--color-yellow); 
   /* background: #b81b55; */
   color: rgba(255, 255, 255, 1);
   border-radius: 2rem;
@@ -61,5 +61,5 @@
 .Tab.inline .Tab-option.active {
   opacity: 1;
   pointer-events: none;
-  color: var(--color-pink);
+  color: var(--color-yellow);
 }

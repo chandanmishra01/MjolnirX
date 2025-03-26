@@ -28,12 +28,12 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { link: "https://twitter.com/ampedfinance", name: "Twitter", icon: twitterIcon },
-  { link: "https://medium.com/@ampedfinance", name: "Medium", icon: mediumIcon },
-  { link: "https://amped.gitbook.io", name: "Gitbook", icon: gitbookIcon },
-  { link: "https://t.me/ampedfinance", name: "Telegram", icon: telegramIcon },
-  { link: "https://discord.gg/nNKqweuAXj", name: "Discord", icon: discordIcon },
-  { link: "https://github.com/amped-finance", name: "Github", icon: githubIcon },
+  { link: "#", name: "Twitter", icon: twitterIcon },
+  { link: "#", name: "Medium", icon: mediumIcon },
+  { link: "#", name: "Gitbook", icon: gitbookIcon },
+  { link: "#", name: "Telegram", icon: telegramIcon },
+  { link: "#", name: "Discord", icon: discordIcon },
+  { link: "#", name: "Github", icon: githubIcon },
 
 ];
 

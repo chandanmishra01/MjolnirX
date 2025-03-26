@@ -42,7 +42,7 @@ const OverallLeaderboard = ({ leaderboardData, tradePoints, alpPoints }) => {
                 <th>Total Points</th>
                 <th>Trading Volume</th>
                 <th>LP Points</th>
-                <th>LL Prize</th>
+                <th>BONE Prize</th>
               </tr>
             </thead>
             <tbody>

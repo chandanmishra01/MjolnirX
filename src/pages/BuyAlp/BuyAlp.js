@@ -28,15 +28,15 @@ export default function BuyAlp(props) {
     <div className="default-container page-layout">
       <div className="section-title-block">
         <div className="section-title-icon">
-          <img src={buyALPIcon} alt={t`Buy ALP Icon`} />
+          <img src={buyALPIcon} alt={t`Buy PLP Icon`} />
         </div>
         <div className="section-title-content">
           <div className="Page-title">
-            <Trans>Buy / Sell ALP</Trans>
+            <Trans>Buy / Sell PLP</Trans>
           </div>
           <div className="Page-description">
             {/* <Trans> */}
-              Purchase <ExternalLink href="https://amped.gitbook.io/amped/usdblp">ALP tokens</ExternalLink> to earn{" "}
+              Purchase <ExternalLink href="https://amped.gitbook.io/amped/usdblp">PLP tokens</ExternalLink> to earn{" "}
               {nativeTokenSymbol} fees from swaps and leverages trading.
             {/* </Trans> */}
             <br />

@@ -10,7 +10,7 @@ import settingsIcon from "img/ic_settings_16.svg";
 // import arbitrumIcon from "img/ic_arbitrum_24.svg";
 // import avaxIcon from "img/ic_avalanche_24.svg";
 // import goerliIcon from "img/ic_goerli_24.svg";
-import baseIcon from "img/favicon.ico";
+import baseIcon from "img/puppynet.png";
 import checkedIcon from "img/ic_checked.svg";
 import { importImage } from "lib/legacy";
 import { defaultLocale, dynamicActivate, isTestLanguage, locales } from "lib/i18n";

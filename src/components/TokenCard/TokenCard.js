@@ -2,8 +2,8 @@ import React, { useCallback, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Trans } from "@lingui/macro";
 
-import ampBigIcon from "img/ic_amp.svg";
-import alpBigIcon from "img/ic_alp.svg";
+import poeBigIcon from "img/ic_poe.svg";
+import plpBigIcon from "img/ic_plp.svg";
 
 import { isHomeSite } from "lib/legacy";
 
@@ -69,11 +69,11 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
     <div className="Home-token-card-options">
       <div className="Home-token-card-option">
         <div className="Home-token-card-option-icon">
-          <img src={ampBigIcon} alt="bluBigIcon" /> AMP
+          <img src={poeBigIcon} alt="bluBigIcon" /> POE
         </div>
         <div className="Home-token-card-option-info">
           <div className="Home-token-card-option-title">
-            <Trans>AMP is the utility and governance token. Accrues 30% of the platform's generated fees.</Trans>
+            <Trans>POE is the utility and governance token. Accrues 30% of the platform's generated fees.</Trans>
           </div>
           <div className="Home-token-card-option-apr">
             {`${getChainName(chainId)} APR:`} <APRLabel chainId={chainId} label="ampAprTotal" key={getChainName(chainId)} />{" "}
@@ -99,11 +99,11 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
       </div>
       <div className="Home-token-card-option">
         <div className="Home-token-card-option-icon">
-          <img src={alpBigIcon} alt="blpBigIcon" /> ALP
+          <img src={plpBigIcon} alt="blpBigIcon" /> PLP
         </div>
         <div className="Home-token-card-option-info">
           <div className="Home-token-card-option-title">
-            <Trans>ALP is the liquidity provider token. Accrues 70% of the platform's generated fees.</Trans>
+            <Trans>PLP is the liquidity provider token. Accrues 70% of the platform's generated fees.</Trans>
           </div>
           <div className="Home-token-card-option-apr">
             {`${getChainName(chainId)} APR:`} <APRLabel chainId={chainId} label="alpAprTotal" key={getChainName(chainId)} />{" "}

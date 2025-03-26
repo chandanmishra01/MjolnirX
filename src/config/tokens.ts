@@ -632,17 +632,17 @@ export const ALP_POOL_COLORS = {
   BTC: "#F7931A",
   BNB: "#F0B90A",
   WBTC: "#F7931A",
-  USDC: "#2775CA",
   "USDC.e": "#2A5ADA",
-  USDT: "#67B18A",
   MIM: "#9695F8",
   MATIC: "#000",
   DAI: "#FAC044",
   UNI: "#E9167C",
   AVAX: "#E84142",
-  LINK: "#3256D6",
-  SOL: "#9845FF",
-  LL: "#3256D6",
+  TREAT: "#3256D6",
+  SHIB: "#ef6401",
+  BONE: "#3256D6",
+  USDT: "#67B18A",
+  USDC: "#2775CA",
 };
 
 export const TOKENS_MAP: { [chainId: number]: { [address: string]: Token } } = {};

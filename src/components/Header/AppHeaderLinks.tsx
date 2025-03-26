@@ -81,11 +81,11 @@ export function AppHeaderLinks({
           <Trans>IDO</Trans>
         </ExternalLink>
       </div> */}
-      <div className="App-header-link-container">
+      {/* <div className="App-header-link-container">
         <ExternalLink href="https://stats.amped.finance">
           <Trans>Analytics</Trans>
         </ExternalLink>
-      </div>
+      </div> */}
       {/* <div className="App-header-link-container">
         <HeaderLink
           to="/ecosystem"
@@ -95,11 +95,11 @@ export function AppHeaderLinks({
           <Trans>Ecosystem</Trans>
         </HeaderLink>
       </div> */}
-      <div className="App-header-link-container">
+      {/* <div className="App-header-link-container">
         <ExternalLink href="https://amped.gitbook.io/amped/">
           <Trans>Documentation</Trans>
         </ExternalLink>
-      </div>
+      </div> */}
       {small && !isHomeSite() && (
         <div className="App-header-link-container">
           {/* eslint-disable-next-line */}

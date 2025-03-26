@@ -41,8 +41,8 @@ import Footer from "components/Footer/Footer";
 
 import "./DashboardV2.css";
 
-import amp40Icon from "img/ic_amp.svg";
-import alp40Icon from "img/ic_alp.svg";
+import poe40Icon from "img/ic_poe.svg";
+import plp40Icon from "img/ic_plp.svg";
 
 import AssetDropdown from "./AssetDropdown";
 import ExternalLink from "components/ExternalLink/ExternalLink";
@@ -415,7 +415,7 @@ export default function DashboardV2() {
               )}
               <br />
               <div>
-                <ExternalLink href="https://amped.gitbook.io/amped/">
+                <ExternalLink href="https://amped.gitbook.io/">
                   <Trans>More Info</Trans>
                 </ExternalLink>
               </div>
@@ -454,7 +454,7 @@ export default function DashboardV2() {
     {
       name: t`not staked`,
       value: notStakedPercent,
-      color: "#5c0af5",
+      color: "#ef6401",
     },
   ];
 
@@ -557,7 +557,7 @@ export default function DashboardV2() {
                       handle={`$${formatAmount(tvl, USD_DECIMALS, 0, true)}`}
                       position="right-bottom"
                       renderContent={() => (
-                        <span>{t`Assets Under Management: AMP staked (All chains) + ALP pool (${chainName})`}</span>
+                        <span>{t`Assets Under Management: POE staked (All chains) + PLP pool (${chainName})`}</span>
                         // <div>{t`Assets Under Management: AMP staked (All chains) + ALP pool (${chainName})`}</div>
                       )}
                     />
@@ -565,13 +565,13 @@ export default function DashboardV2() {
                 </div>
                 <div className="App-card-row">
                   <div className="label">
-                    <Trans>ALP Pool</Trans>
+                    <Trans>PLP Pool</Trans>
                   </div>
                   <div>
                     <TooltipComponent
                       handle={`$${formatAmount(aum, USD_DECIMALS, 0, true)}`}
                       position="right-bottom"
-                      renderContent={() => <span>{t`Total value of tokens in ALP pool (${chainName})`}</span>}
+                      renderContent={() => <span>{t`Total value of tokens in PLP pool (${chainName})`}</span>}
                     />
                   </div>
                 </div>
@@ -748,7 +748,7 @@ export default function DashboardV2() {
               {chainId === PEGASUS && <img src={pegasus24Icon} alt="pegasus24Icon" width="50px" height="50px" />} */}
             </div>
             <div className="Page-description">
-              <Trans>Platform and ALP index tokens.</Trans>
+              <Trans>Platform and PLP index tokens.</Trans>
             </div>
           </div>
           <div className="DashboardV2-token-cards">
@@ -758,11 +758,11 @@ export default function DashboardV2() {
                   <div className="App-card-title">
                     <div className="App-card-title-mark">
                       <div className="App-card-title-mark-icon">
-                        <img src={amp40Icon} alt="AMP Token Icon" width="35px" height="35px" />
+                        <img src={poe40Icon} alt="POE Token Icon" width="35px" height="35px" />
                       </div>
                       <div className="App-card-title-mark-info">
-                        <div className="App-card-title-mark-title">AMP</div>
-                        <div className="App-card-title-mark-subtitle">AMP</div>
+                        <div className="App-card-title-mark-title">POE</div>
+                        <div className="App-card-title-mark-subtitle">POE</div>
                       </div>
                       <div>
                         <AssetDropdown assetSymbol="AMP" />
@@ -805,7 +805,7 @@ export default function DashboardV2() {
                       <div className="label">
                         <Trans>Supply</Trans>
                       </div>
-                      <div>{formatAmount(totalAmpSupply, AMP_DECIMALS, 0, true)} AMP</div>
+                      <div>{formatAmount(totalAmpSupply, AMP_DECIMALS, 0, true)} POE</div>
                     </div>
                     <div className="App-card-row">
                       <div className="label">
@@ -887,7 +887,7 @@ export default function DashboardV2() {
                   <div className="App-card-title">
                     <div className="App-card-title-mark">
                       <div className="App-card-title-mark-icon">
-                        <img src={alp40Icon} alt="alp40Icon" width="35px" height="35px" />
+                        <img src={plp40Icon} alt="plp40Icon" width="35px" height="35px" />
                         {/* {chainId === PEGASUS ? (
                           <img src={pegasus16Icon} alt={t`Pegasus Icon`} className="selected-network-symbol" />
                         ) : (
@@ -895,8 +895,8 @@ export default function DashboardV2() {
                         )} */}
                       </div>
                       <div className="App-card-title-mark-info">
-                        <div className="App-card-title-mark-title">ALP</div>
-                        <div className="App-card-title-mark-subtitle">ALP</div>
+                        <div className="App-card-title-mark-title">PLP</div>
+                        <div className="App-card-title-mark-subtitle">PLP</div>
                       </div>
                       <div>
                         <AssetDropdown assetSymbol="ALP" />
@@ -915,7 +915,7 @@ export default function DashboardV2() {
                       <div className="label">
                         <Trans>Supply</Trans>
                       </div>
-                      <div>{formatAmount(alpSupply, ALP_DECIMALS, 0, true)} ALP</div>
+                      <div>{formatAmount(alpSupply, ALP_DECIMALS, 0, true)} PLP</div>
                     </div>
                     <div className="App-card-row">
                       <div className="label">
@@ -972,7 +972,7 @@ export default function DashboardV2() {
                         ))}
                       </Pie>
                       <text x={"50%"} y={"50%"} fill="white" textAnchor="middle" dominantBaseline="middle">
-                        ALP Pool
+                        PLP Pool
                       </text>
                       <Tooltip content={<CustomTooltip />} />
                     </PieChart>
@@ -982,7 +982,7 @@ export default function DashboardV2() {
             </div>
             <div className="token-table-wrapper App-card">
               <div className="App-card-title font-kufam">
-                <Trans>ALP Index Composition</Trans>{" "}
+                <Trans>PLP Index Composition</Trans>{" "}
                 {/* {chainId === ARBITRUM && <img src={arbitrum16Icon} alt={t`Arbitrum Icon`} />}
                 {chainId === PEGASUS && <img src={pegasus16Icon} alt={t`Pegasus Icon`} />} */}
               </div>

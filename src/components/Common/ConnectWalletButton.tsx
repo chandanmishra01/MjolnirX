@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function ConnectWalletButton({ imgSrc, children, onClick, className }: Props) {
-  let classNames = cx("btn btn-primary btn-sm connect-wallet button-secondary btn-header", className);
+  let classNames = cx("btn btn-primary btn-sm connect-wallet button-secondary  btn-header", className);
   return (
     <button className={classNames} onClick={onClick}>
       {imgSrc && <img className="btn-image" src={imgSrc} alt="Connect Wallet" />}
