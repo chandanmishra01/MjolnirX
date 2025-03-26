@@ -17,11 +17,11 @@ export const SUPPORTED_CHAIN_IDS = [PUPPYNET];
 export const ACTIVE_CHAIN_IDS = [PUPPYNET]
 
 export const IS_NETWORK_DISABLED = {
+  [PUPPYNET]: false,
   [ARBITRUM]: true,
   [PEGASUS]: true,
   [PHOENIX]: true,
   [BSCTESTNET]: true,
-  [PUPPYNET]: false,
 };
 
 export const CHAIN_NAMES_MAP = {

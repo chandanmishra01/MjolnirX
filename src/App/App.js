@@ -127,18 +127,20 @@ const Zoom = cssTransition({
 
 const arbWsProvider = new ethers.providers.WebSocketProvider(getAlchemyWsUrl());
 
+const puppynetProvider = new ethers.providers.JsonRpcProvider(PUPPYNET_RPC_PROVIDER[0]);
+
 const pegasusProvider = new ethers.providers.JsonRpcProvider(PEGASUS_RPC_PROVIDERS[0]);
 
 const phoenixProvider = new ethers.providers.JsonRpcProvider(PHOENIX_RPC_PROVIDERS[0]);
 
 const bsctestnetProvider = new ethers.providers.JsonRpcProvider(BSC_TESTNET_RPC_PROVIDER[0]);
 
-const puppynetProvider = new ethers.providers.JsonRpcProvider(PUPPYNET_RPC_PROVIDER[0]);
-
-
 function getWsProvider(active, chainId) {
   if (!active) {
     return;
+  }
+  if(chainId === PUPPYNET) {
+    return puppynetProvider;
   }
   if (chainId === ARBITRUM) {
     return arbWsProvider;
@@ -152,10 +154,6 @@ function getWsProvider(active, chainId) {
 
   if(chainId === BSCTESTNET) {
     return bsctestnetProvider;
-  }
-
-  if(chainId === PUPPYNET) {
-    return puppynetProvider;
   }
 }
 
@@ -453,7 +451,7 @@ function FullApp() {
   const positionRouterAddress = getContract(chainId, "PositionRouter");
 
   useEffect(() => {
-    const wsVaultAbi = (chainId === PEGASUS || chainId === PHOENIX || chainId === BSCTESTNET || chainId === PUPPYNET) ? Vault.abi : VaultV2b.abi;
+    const wsVaultAbi = (chainId === PUPPYNET || chainId === PEGASUS || chainId === PHOENIX || chainId === BSCTESTNET) ? Vault.abi : VaultV2b.abi;
     const wsProvider = getWsProvider(isConnected, chainId);
     if (!wsProvider) {
       return;
