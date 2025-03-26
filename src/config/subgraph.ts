@@ -39,12 +39,12 @@ export const SUBGRAPH_URLS = {
   },
 
   [PUPPYNET]: {
-    stats: "https://54.172.168.160/subgraphs/name/positions-finance/trades/",
-    referrals: "https://54.172.168.160/subgraphs/name/positions-finance/referrals",
-    trades:"https://54.172.168.160/subgraphs/name/positions-finance/trades/",  
-    raw:"https://54.172.168.160/subgraphs/name/positions-finance/trades/",  
-    price: "https://54.172.168.160/subgraphs/name/positions-finance/trades/",
-    ordernew: "https://54.172.168.160/subgraphs/name/positions-finance/orders",
+    stats: "https://subgraph.positions.exchange/subgraphs/name/positions-finance/trades/",
+    referrals: "https://subgraph.positions.exchange/subgraphs/name/positions-finance/referrals",
+    trades:"https://subgraph.positions.exchange/subgraphs/name/positions-finance/trades/",  
+    raw:"https://subgraph.positions.exchange/subgraphs/name/positions-finance/trades/",  
+    price: "https://subgraph.positions.exchange/subgraphs/name/positions-finance/trades/",
+    ordernew: "https://subgraph.positions.exchange/subgraphs/name/positions-finance/orders",
     points: "https://graph.phoenix.lightlink.io/query/subgraphs/name/amped-finance/tradespointsnew2"
   },
   
