@@ -24,7 +24,7 @@ export function useChainId() {
   }
 
   if (!chainId || !SUPPORTED_CHAIN_IDS.includes(chainId)) {
-    chainId = 97;
+    chainId = 157;
   }
 
   return { chainId };
