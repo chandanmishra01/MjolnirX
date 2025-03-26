@@ -134,8 +134,8 @@ function Referrals({ connectWallet, setPendingTxns, pendingTxns }) {
             </div>
             <div className="Page-description">
               <Trans>
-                Get fee discounts and earn rebates through the AMP referral program. For more information, please read the{" "}
-                <ExternalLink href="https://amped.gitbook.io/amped/referrals">referral program details</ExternalLink>.
+                Get fee discounts and earn rebates through the POE referral program. For more information, please read the{" "}
+                <ExternalLink href="#">referral program details</ExternalLink>.
               </Trans>
             </div>
           </div>

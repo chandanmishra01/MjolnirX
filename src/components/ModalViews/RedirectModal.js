@@ -38,7 +38,7 @@ export function RedirectPopupModal({
       <br />
       <Trans>
         Alternative links can be found in the{" "}
-        <ExternalLink href="https://amped.gitbook.io/amped/app-links">docs</ExternalLink>.
+        <ExternalLink href="#">docs</ExternalLink>.
         <br />
         <br />
         By clicking Agree you accept the <ExternalLink href="https://amped.finance/#/terms-and-conditions">

@@ -144,7 +144,7 @@ function Leaderboard() {
                 </div>
                 <div style={{ marginBottom: "16px" }}>
                   For more information, please read the{" "}
-                  <ExternalLink href="https://medium.com/@ampedfinance/user-guide-for-trading-leaderboard-dc380228cdc4">Leaderboard Guide</ExternalLink> for details.
+                  <ExternalLink href="#">Leaderboard Guide</ExternalLink> for details.
                 </div>
                 <div style={{ marginBottom: "16px" }}>
                   Season 1 will commence on Monday the 9th of September and conclude on Monday the 30th of September.

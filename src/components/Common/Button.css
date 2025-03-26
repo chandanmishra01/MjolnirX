@@ -143,6 +143,12 @@ a.btn {
 .button-secondary:hover {
   background: var(--color-yellow-hover-2);
 }
+.button-primary.disabled,
+.button-secondary.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 .btn-header {
   min-width: 20rem;
   height: 4rem;

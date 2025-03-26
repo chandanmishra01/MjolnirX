@@ -15,14 +15,14 @@ import { isHomeSite } from "lib/legacy";
 const footerLinks = {
   home: [
     { text: t`Terms and Conditions`, link: "/terms-and-conditions" },
-    { text: t`Referral Terms`, link: "https://amped.gitbook.io/amped/referrals", external: true },
-    { text: t`Media Kit`, link: "https://amped.gitbook.io/amped/", external: true },
+    { text: t`Referral Terms`, link: "#", external: true },
+    { text: t`Media Kit`, link: "#", external: true },
     // { text: "Jobs", link: "/jobs", isAppLink: true },
   ],
   app: [
     { text: t`Terms and Conditions`, link: "/terms-and-conditions" },
     { text: t`Referral Terms`, link: "/referral-terms" },
-    { text: t`Media Kit`, link: "https://amped.gitbook.io/amped/", external: true },
+    { text: t`Media Kit`, link: "#", external: true },
     // { text: "Jobs", link: "/jobs" },
   ],
 };
@@ -78,7 +78,7 @@ export default function Footer({ showRedirectModal, redirectPopupTimestamp }: Pr
               </NavLink>
             );
           })} */}
-          © 2023 Amped Finance. All rights reserved
+          © 2025 Positions Exchange. All rights reserved
         </div>
       </div>
     </div>

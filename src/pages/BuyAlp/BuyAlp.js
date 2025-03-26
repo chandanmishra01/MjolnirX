@@ -36,7 +36,7 @@ export default function BuyAlp(props) {
           </div>
           <div className="Page-description">
             {/* <Trans> */}
-              Purchase <ExternalLink href="https://amped.gitbook.io/amped/usdblp">PLP tokens</ExternalLink> to earn{" "}
+              Purchase <ExternalLink href="#">PLP tokens</ExternalLink> to earn{" "}
               {nativeTokenSymbol} fees from swaps and leverages trading.
             {/* </Trans> */}
             <br />

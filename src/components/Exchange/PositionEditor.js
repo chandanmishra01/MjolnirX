@@ -595,7 +595,7 @@ export default function PositionEditor(props) {
                                 This is the network cost required to execute the {depositOrWithdrawalText}.
                                 <br />
                                 <br />
-                                <ExternalLink href="https://amped.gitbook.io/amped/trading#execution-fee">
+                                <ExternalLink href="#">
                                   More Info
                                 </ExternalLink>
                               </Trans>

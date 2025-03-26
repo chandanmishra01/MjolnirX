@@ -416,19 +416,19 @@ export default function PositionsList(props) {
                       <div className="label">
                         <Trans>Mark Price</Trans>
                       </div>
-                      <div>${formatAmount(position.markPrice, USD_DECIMALS, 4, true)}</div>
+                      <div>${formatAmount(position.markPrice, USD_DECIMALS, 6, true)}</div>
                     </div>
                     <div className="App-card-row">
                       <div className="label">
                         <Trans>Entry Price</Trans>
                       </div>
-                      <div>${formatAmount(position.averagePrice, USD_DECIMALS, 4, true)}</div>
+                      <div>${formatAmount(position.averagePrice, USD_DECIMALS, 6, true)}</div>
                     </div>
                     <div className="App-card-row">
                       <div className="label">
                         <Trans>Liq. Price</Trans>
                       </div>
-                      <div>${formatAmount(liquidationPrice, USD_DECIMALS, 4, true)}</div>
+                      <div>${formatAmount(liquidationPrice, USD_DECIMALS, 6, true)}</div>
                     </div>
                   </div>
                   <div className="App-card-divider"></div>
@@ -681,7 +681,8 @@ export default function PositionsList(props) {
                 </td>
                 <td className="clickable" onClick={() => onPositionClick(position)}>
                   <Tooltip
-                    handle={`$${formatAmount(position.markPrice, USD_DECIMALS, position.indexToken.symbol==="LL"?4:2, true)}`}
+                    // handle={`$${formatAmount(position.markPrice, USD_DECIMALS, position.indexToken.symbol==="LL"?4:2, true)}`}
+                    handle={`$${formatAmount(position.markPrice, USD_DECIMALS, 6, true)}`}
                     position="left-bottom"
                     handleClassName="plain clickable"
                     renderContent={() => {
@@ -703,10 +704,12 @@ export default function PositionsList(props) {
                   />
                 </td>
                 <td className="clickable" onClick={() => onPositionClick(position)}>
-                  ${formatAmount(position.averagePrice, USD_DECIMALS, position.indexToken.symbol==="LL"?4:2, true)}
+                  {/* ${formatAmount(position.averagePrice, USD_DECIMALS, position.indexToken.symbol==="LL"?4:2, true)} */}
+                  ${formatAmount(position.averagePrice, USD_DECIMALS, 6, true)}
                 </td>
                 <td className="clickable" onClick={() => onPositionClick(position)}>
-                  ${formatAmount(liquidationPrice, USD_DECIMALS, position.indexToken.symbol==="LL"?4:2, true)}
+                  {/* ${formatAmount(liquidationPrice, USD_DECIMALS, position.indexToken.symbol==="LL"?4:2, true)} */}
+                  ${formatAmount(liquidationPrice, USD_DECIMALS, 6, true)}
                 </td>
 
                 <td>

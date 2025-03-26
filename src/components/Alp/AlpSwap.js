@@ -116,7 +116,7 @@ export default function AlpSwap(props) {
   } = props;
   const history = useHistory();
   const swapLabel = isBuying ? "BuyAlp" : "SellAlp";
-  const tabLabel = isBuying ? t`Buy ALP` : t`Sell ALP`;
+  const tabLabel = isBuying ? t`Buy PLP` : t`Sell PLP`;
   const { chainId } = useChainId();
   const tokens = getTokens(chainId);
   const whitelistedTokens = getWhitelistedTokens(chainId);
@@ -745,8 +745,8 @@ export default function AlpSwap(props) {
                 )} */}
               </div>
               <div className="App-card-title-mark-info">
-                <div className="App-card-title-mark-title">ALP</div>
-                <div className="App-card-title-mark-subtitle">ALP</div>
+                <div className="App-card-title-mark-title">PLP</div>
+                <div className="App-card-title-mark-subtitle">PLP</div>
               </div>
               <div>
                 <AssetDropdown assetSymbol="ALP" />
@@ -766,7 +766,7 @@ export default function AlpSwap(props) {
                 <Trans>Wallet</Trans>
               </div>
               <div className="value">
-                {formatAmount(alpBalance, ALP_DECIMALS, 4, true)} ALP ($
+                {formatAmount(alpBalance, ALP_DECIMALS, 4, true)} PLP ($
                 {formatAmount(alpBalanceUsd, USD_DECIMALS, 2, true)})
               </div>
             </div>
@@ -775,7 +775,7 @@ export default function AlpSwap(props) {
                 <Trans>Staked</Trans>
               </div>
               <div className="value">
-                {formatAmount(alpBalance, ALP_DECIMALS, 4, true)} ALP ($
+                {formatAmount(alpBalance, ALP_DECIMALS, 4, true)} PLP ($
                 {formatAmount(alpBalanceUsd, USD_DECIMALS, 2, true)})
               </div>
             </div>
@@ -789,7 +789,7 @@ export default function AlpSwap(props) {
                 </div>
                 <div className="value">
                   <Tooltip
-                    handle={`${formatAmount(reservedAmount, 18, 4, true)} ALP ($${formatAmount(
+                    handle={`${formatAmount(reservedAmount, 18, 4, true)} PLP ($${formatAmount(
                       reserveAmountUsd,
                       USD_DECIMALS,
                       2,
@@ -797,7 +797,7 @@ export default function AlpSwap(props) {
                     )})`}
                     position="right-bottom"
                     renderContent={() =>
-                      t`${formatAmount(reservedAmount, 18, 4, true)} ALP have been reserved for vesting.`
+                      t`${formatAmount(reservedAmount, 18, 4, true)} PLP have been reserved for vesting.`
                     }
                   />
                 </div>
@@ -836,7 +836,7 @@ export default function AlpSwap(props) {
               </div>
               <div className="value">
                 <Trans>
-                  {formatAmount(alpSupply, ALP_DECIMALS, 4, true)} ALP ($
+                  {formatAmount(alpSupply, ALP_DECIMALS, 4, true)} PLP ($
                   {formatAmount(alpSupplyUsd, USD_DECIMALS, 2, true)})
                 </Trans>
               </div>
@@ -845,7 +845,7 @@ export default function AlpSwap(props) {
         </div>
         <div className="AlpSwap-box App-box">
           <Tab
-            options={[t`Buy ALP`, t`Sell ALP`]}
+            options={[t`Buy PLP`, t`Sell PLP`]}
             option={tabLabel}
             onChange={onSwapOptionChange}
             className="Exchange-swap-option-tabs"
@@ -891,7 +891,7 @@ export default function AlpSwap(props) {
               defaultTokenName={"ALP"}
             >
               <div className="selected-token">
-                ALP <img src={alp24Icon} alt="alp24Icon" />
+                PLP <img src={alp24Icon} alt="alp24Icon" />
               </div>
             </BuyInputSection>
           )}
@@ -920,7 +920,7 @@ export default function AlpSwap(props) {
               defaultTokenName={"ALP"}
             >
               <div className="selected-token">
-              ALP <img src={alp24Icon} alt="alp24Icon" />
+              PLP <img src={alp24Icon} alt="alp24Icon" />
               </div>
             </BuyInputSection>
           )}
@@ -1012,7 +1012,7 @@ export default function AlpSwap(props) {
         {isBuying && (
           <div className="Page-description">
             <Trans>
-              Fees may vary depending on which asset you use to buy ALP. <br />
+              Fees may vary depending on which asset you use to buy PLP. <br />
               Enter the amount of PLP you want to purchase in the order form, then check here to compare fees.
             </Trans>
           </div>
@@ -1020,8 +1020,8 @@ export default function AlpSwap(props) {
         {!isBuying && (
           <div className="Page-description">
             <Trans>
-              Fees may vary depending on which asset you sell ALP for. <br />
-              Enter the amount of ALP you want to redeem in the order form, then check here to compare fees.
+              Fees may vary depending on which asset you sell PLP for. <br />
+              Enter the amount of PLP you want to redeem in the order form, then check here to compare fees.
             </Trans>
           </div>
         )}
@@ -1045,7 +1045,7 @@ export default function AlpSwap(props) {
                     position="right-bottom text-none"
                     renderContent={() => (
                       <p className="text-white">
-                        <Trans>Available amount to deposit into ALP.</Trans>
+                        <Trans>Available amount to deposit into PLP.</Trans>
                       </p>
                     )}
                   />
@@ -1058,7 +1058,7 @@ export default function AlpSwap(props) {
                       return (
                         <p className="text-white">
                           <Trans>
-                            Available amount to withdraw from ALP. Funds not utilized by current open positions.
+                            Available amount to withdraw from PLP. Funds not utilized by current open positions.
                           </Trans>
                         </p>
                       );
@@ -1156,7 +1156,7 @@ export default function AlpSwap(props) {
                               Max pool capacity reached for {tokenInfo.symbol}
                               <br />
                               <br />
-                              Please mint ALP using another token
+                              Please mint PLP using another token
                             </Trans>
                             <br />
                             <p>
@@ -1305,7 +1305,7 @@ export default function AlpSwap(props) {
                       position="right-bottom"
                       renderContent={() => (
                         <Trans>
-                          Max pool capacity reached for {tokenInfo.symbol}. Please mint ALP using another token
+                          Max pool capacity reached for {tokenInfo.symbol}. Please mint PLP using another token
                         </Trans>
                       )}
                     />
@@ -1343,7 +1343,7 @@ export default function AlpSwap(props) {
                         position="left-bottom"
                         renderContent={() => (
                           <p className="text-white">
-                            <Trans>Available amount to deposit into ALP.</Trans>
+                            <Trans>Available amount to deposit into PLP.</Trans>
                           </p>
                         )}
                       />
@@ -1367,7 +1367,7 @@ export default function AlpSwap(props) {
                             return (
                               <p className="text-white">
                                 <Trans>
-                                  Available amount to withdraw from ALP. Funds not utilized by current open positions.
+                                  Available amount to withdraw from PLP. Funds not utilized by current open positions.
                                 </Trans>
                               </p>
                             );

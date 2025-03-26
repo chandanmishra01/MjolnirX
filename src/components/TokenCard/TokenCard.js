@@ -81,7 +81,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </div>
           <div className="Home-token-card-option-action">
             <div className="buy">
-              <ExternalLink href="https://app.elektrik.network/#/swap" className="button-primary">
+              <ExternalLink href="https://app.elektrik.network/#/swap" className="button-primary disabled">
                 <Trans>Buy</Trans>
               </ExternalLink>
               {/* <BuyLink to="/buy_layer" className="default-btn" network={chainId}>
@@ -91,7 +91,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
                 <Trans>Buy on Goerli</Trans>
               </BuyLink> */}
             </div>
-            <ExternalLink href="https://amped.gitbook.io/amped/usdblu" className="button-secondary">
+            <ExternalLink href="#" className="button-secondary disabled">
               <Trans>Read more</Trans>
             </ExternalLink>
           </div>
@@ -119,10 +119,10 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
               </BuyLink> */}
             </div>
             <a
-              href="https://amped.gitbook.io/amped/usdblp"
+              href="#"
               target="_blank"
               rel="noreferrer"
-              className="button-secondary"
+              className="button-secondary disabled"
             >
               <Trans>Read more</Trans>
             </a>

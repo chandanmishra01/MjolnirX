@@ -389,7 +389,7 @@ export default function DashboardV2() {
                     <br />
                     Get lower fees to{" "}
                     <Link to="/buy_alp" target="_blank" rel="noopener noreferrer">
-                      buy ALP
+                      buy PLP
                     </Link>{" "}
                     with {tokenInfo.symbol},&nbsp; and to{" "}
                     <Link to="/trade" target="_blank" rel="noopener noreferrer">
@@ -415,7 +415,7 @@ export default function DashboardV2() {
               )}
               <br />
               <div>
-                <ExternalLink href="https://amped.gitbook.io/">
+                <ExternalLink href="#">
                   <Trans>More Info</Trans>
                 </ExternalLink>
               </div>

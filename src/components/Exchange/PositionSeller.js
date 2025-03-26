@@ -797,7 +797,7 @@ export default function PositionSeller(props) {
           <div className="Confirmation-box-warning">
             <Trans>
               Reducing the position at the current price will forfeit a&nbsp;
-              <ExternalLink href="https://amped.gitbook.io/amped/trading#minimum-price-change">
+              <ExternalLink href="#">
                 pending profit
               </ExternalLink>{" "}
               of {deltaStr}. <br />
@@ -814,7 +814,7 @@ export default function PositionSeller(props) {
         <div className="Confirmation-box-warning">
           <Trans>
             This order will forfeit a&nbsp;
-            <ExternalLink href="https://amped.gitbook.io/amped/trading#minimum-price-change">profit</ExternalLink> of{" "}
+            <ExternalLink href="#">profit</ExternalLink> of{" "}
             {deltaStr}. <br />
           </Trans>
           <Trans>
@@ -1144,7 +1144,7 @@ export default function PositionSeller(props) {
 
                       <div className="PositionSeller-fee-item">
                         <Trans>
-                          <ExternalLink href="https://amped.gitbook.io/amped/trading#fees">More Info</ExternalLink> about
+                          <ExternalLink href="#">More Info</ExternalLink> about
                           fees.
                         </Trans>
                       </div>

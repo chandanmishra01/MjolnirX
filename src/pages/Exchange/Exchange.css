@@ -767,7 +767,7 @@ input.Exchange-swap-input.small {
 .Exchange-swap-button {
   display: block;
   width: 100%;
-  background: var(--color-pink);
+  background: var(--color-yellow);
 }
 
 .Exchange-swap-ball-container {

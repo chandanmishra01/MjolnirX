@@ -666,7 +666,7 @@ export default function ConfirmationBox(props) {
                         <br />
                         <Trans>
                           This is the network cost required to execute the postion.{" "}
-                          <ExternalLink href="https://amped.gitbook.io/amped/trading#execution-fee">
+                          <ExternalLink href="#">
                             More Info
                           </ExternalLink>
                         </Trans>

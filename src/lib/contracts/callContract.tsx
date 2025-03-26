@@ -102,7 +102,7 @@ export async function callContract(
               <br />
               <br />
               Please try changing the RPC url in your wallet settings.{" "}
-              <ExternalLink href="https://amped.gitbook.io/amped/trading#backup-rpc-urls">More info</ExternalLink>
+              <ExternalLink href="#">More info</ExternalLink>
             </Trans>
             <br />
             {originalError && <ToastifyDebug>{originalError}</ToastifyDebug>}

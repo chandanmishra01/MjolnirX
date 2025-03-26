@@ -314,7 +314,7 @@ function UnstakeModal(props) {
         {burnAmount && burnAmount.gt(0) && rewardReductionBasisPoints && rewardReductionBasisPoints.gt(0) && (
           <div className="Modal-note">
             Unstaking will burn&nbsp;
-            <a href="https://amped.gitbook.io/amped/rewards" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               {formatAmount(burnAmount, 18, 4, true)} Multiplier Points
             </a>
             .&nbsp;
@@ -452,7 +452,7 @@ function VesterDepositModal(props) {
                   onChange={(e) => setValue(e.target.value)}
                 />
               </div>
-              <div className="PositionEditor-token-symbol">esAMP</div>
+              <div className="PositionEditor-token-symbol">esPOE</div>
             </div>
           </div>
           <div className="VesterDepositModal-info-rows">
@@ -460,7 +460,7 @@ function VesterDepositModal(props) {
               <div className="Exchange-info-label">
                 <Trans>Wallet</Trans>
               </div>
-              <div className="align-right">{formatAmount(balance, 18, 2, true)} esAMP</div>
+              <div className="align-right">{formatAmount(balance, 18, 2, true)} esPOE</div>
             </div>
             <div className="Exchange-info-row">
               <div className="Exchange-info-label">
@@ -484,12 +484,12 @@ function VesterDepositModal(props) {
                         <StatsTooltipRow
                           showDollar={false}
                           label={t`Deposited`}
-                          value={`${formatAmount(vestedAmount, 18, 2, true)} esAMP`}
+                          value={`${formatAmount(vestedAmount, 18, 2, true)} esPOE`}
                         />
                         <StatsTooltipRow
                           showDollar={false}
                           label={t`Max Capacity`}
-                          value={`${formatAmount(maxVestableAmount, 18, 2, true)} esAMP`}
+                          value={`${formatAmount(maxVestableAmount, 18, 2, true)} esPOE`}
                         />
                       </div>
                     );
@@ -752,22 +752,22 @@ function CompoundModal(props) {
           </div>
           <div>
             <Checkbox isChecked={shouldClaimAmp} setIsChecked={setShouldClaimAmp} disabled={shouldStakeAmp}>
-              <Trans>Claim AMP Rewards</Trans>
+              <Trans>Claim POE Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldStakeAmp} setIsChecked={toggleShouldStakeAmp}>
-              <Trans>Stake AMP Rewards</Trans>
+              <Trans>Stake POE Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldClaimEsAmp} setIsChecked={setShouldClaimEsAmp} disabled={shouldStakeEsAmp}>
-              <Trans>Claim esAMP Rewards</Trans>
+              <Trans>Claim esPOE Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldStakeEsAmp} setIsChecked={toggleShouldStakeEsAmp}>
-              <Trans>Stake esAMP Rewards</Trans>
+              <Trans>Stake esPOE Rewards</Trans>
             </Checkbox>
           </div>
           <div>
@@ -878,12 +878,12 @@ function ClaimModal(props) {
         <div className="CompoundModal-menu">
           <div>
             <Checkbox isChecked={shouldClaimAmp} setIsChecked={setShouldClaimAmp}>
-              <Trans>Claim AMP Rewards</Trans>
+              <Trans>Claim POE Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldClaimEsAmp} setIsChecked={setShouldClaimEsAmp}>
-              <Trans>Claim esAMP Rewards</Trans>
+              <Trans>Claim esPOE Rewards</Trans>
             </Checkbox>
           </div>
           <div>
@@ -1183,15 +1183,15 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
 
   const showStakeAmpModal = () => {
     if (!isAmpTransferEnabled) {
-      helperToast.error(t`AMP transfers not yet enabled`);
+      helperToast.error(t`POE transfers not yet enabled`);
       return;
     }
 
     setIsStakeModalVisible(true);
-    setStakeModalTitle(t`Stake AMP`);
+    setStakeModalTitle(t`Stake POE`);
     setStakeModalMaxAmount(processedData.ampBalance);
     setStakeValue("");
-    setStakingTokenSymbol("AMP");
+    setStakingTokenSymbol("POE");
     setStakingTokenAddress(ampAddress);
     setStakingFarmAddress(stakedAmpTrackerAddress);
     setStakeMethodName("stakeGmx");
@@ -1199,13 +1199,13 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
 
   const showStakeEsAmpModal = () => {
     setIsStakeModalVisible(true);
-    setStakeModalTitle(t`Stake esAMP`);
+    setStakeModalTitle(t`Stake esPOE`);
     setStakeModalMaxAmount(processedData.esAmpBalance);
     setStakeValue("");
-    setStakingTokenSymbol("esAMP");
+    setStakingTokenSymbol("esPOE");
     setStakingTokenAddress(esAmpAddress);
     setStakingFarmAddress(AddressZero);
-    setStakeMethodName("stakeEsAmp");
+    setStakeMethodName("stakeEsPOE");
   };
 
   const showAmpVesterDepositModal = () => {
@@ -1215,8 +1215,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterDepositModalVisible(true);
-    setVesterDepositTitle(t`AMP Vault`);
-    setVesterDepositStakeTokenLabel("staked AMP + esAMP + Multiplier Points");
+    setVesterDepositTitle(t`POE Vault`);
+    setVesterDepositStakeTokenLabel("staked POE + esPOE + Multiplier Points");
     setVesterDepositMaxAmount(remainingVestableAmount);
     setVesterDepositBalance(processedData.esAmpBalance);
     setVesterDepositEscrowedBalance(vestingData.ampVester.escrowedBalance);
@@ -1236,8 +1236,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterDepositModalVisible(true);
-    setVesterDepositTitle(t`ALP Vault`);
-    setVesterDepositStakeTokenLabel("staked ALP");
+    setVesterDepositTitle(t`PLP Vault`);
+    setVesterDepositStakeTokenLabel("staked PLP");
     setVesterDepositMaxAmount(remainingVestableAmount);
     setVesterDepositBalance(processedData.esAmpBalance);
     setVesterDepositEscrowedBalance(vestingData.alpVester.escrowedBalance);
@@ -1257,7 +1257,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterWithdrawModalVisible(true);
-    setVesterWithdrawTitle(t`Withdraw from AMP Vault`);
+    setVesterWithdrawTitle(t`Withdraw from POE Vault`);
     setVesterWithdrawAddress(ampVesterAddress);
   };
 
@@ -1274,11 +1274,11 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
 
   const showUnstakeAmpModal = () => {
     if (!isAmpTransferEnabled) {
-      helperToast.error(t`AMP transfers not yet enabled`);
+      helperToast.error(t`POE transfers not yet enabled`);
       return;
     }
     setIsUnstakeModalVisible(true);
-    setUnstakeModalTitle(t`Unstake AMP`);
+    setUnstakeModalTitle(t`Unstake POE`);
     let maxAmount = processedData.ampInStakedAmp;
     if (
       processedData.ampInStakedAmp &&
@@ -1292,13 +1292,13 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     setUnstakeModalMaxAmount(maxAmount);
     setUnstakeModalReservedAmount(vestingData.ampVesterPairAmount);
     setUnstakeValue("");
-    setUnstakingTokenSymbol("AMP");
+    setUnstakingTokenSymbol("POE");
     setUnstakeMethodName("unstakeGmx");
   };
 
   const showUnstakeEsAmpModal = () => {
     setIsUnstakeModalVisible(true);
-    setUnstakeModalTitle(t`Unstake esAMP`);
+    setUnstakeModalTitle(t`Unstake esPOE`);
     let maxAmount = processedData.esAmpInStakedAmp;
     if (
       processedData.esAmpInStakedAmp &&
@@ -1312,8 +1312,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     setUnstakeModalMaxAmount(maxAmount);
     setUnstakeModalReservedAmount(vestingData.ampVesterPairAmount);
     setUnstakeValue("");
-    setUnstakingTokenSymbol("esAMP");
-    setUnstakeMethodName("unstakeEsAmp");
+    setUnstakingTokenSymbol("esPOE");
+    setUnstakeMethodName("unstakeEsPoe");
   };
 
   const renderMultiplierPointsLabel = useCallback(() => {
@@ -1329,7 +1329,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           return (
             <Trans>
               Boost your rewards with Multiplier Points.&nbsp;
-              <a href="https://amped.gitbook.io/amped/rewards#multiplier-points" rel="noreferrer" target="_blank">
+              <a href="#" rel="noreferrer" target="_blank">
                 More info
               </a>
               .
@@ -1344,11 +1344,11 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
   if (totalRewardTokensAndAlp && totalRewardTokensAndAlp.gt(0)) {
     let ampAmountStr;
     if (processedData.ampInStakedAmp && processedData.ampInStakedAmp.gt(0)) {
-      ampAmountStr = formatAmount(processedData.ampInStakedAmp, 18, 2, true) + " AMP";
+      ampAmountStr = formatAmount(processedData.ampInStakedAmp, 18, 2, true) + " POE";
     }
     let esAmpAmountStr;
     if (processedData.esAmpInStakedAmp && processedData.esAmpInStakedAmp.gt(0)) {
-      esAmpAmountStr = formatAmount(processedData.esAmpInStakedAmp, 18, 2, true) + " esAMP";
+      esAmpAmountStr = formatAmount(processedData.esAmpInStakedAmp, 18, 2, true) + " esPOE";
     }
     let mpAmountStr;
     if (processedData.bonusAmpInFeeAmp && processedData.bnAmpInFeeAmp.gt(0)) {
@@ -1547,7 +1547,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                           <StatsTooltipRow
                             label="Escrowed POE APR"
                             showDollar={false}
-                            value={`${formatKeyAmount(processedData, "ampAprForEsAmp", 2, 2, true)}%`}
+                            value={`${formatKeyAmount(processedData, "poeAprForEsPoe", 2, 2, true)}%`}
                           />
                           {(!processedData.ampBoostAprForNativeToken ||
                             processedData.ampBoostAprForNativeToken.eq(0)) && (
@@ -1725,7 +1725,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 {/* <Link className="App-button-option App-card-option" to="/buy_layer">
                   <Trans>Buy AMP</Trans>
                 </Link> */}
-                <ExternalLink href="https://app.elektrik.network/#/swap" className="App-card-option button-primary">
+                <ExternalLink href="https://app.elektrik.network/#/swap" className="App-card-option button-primary disabled">
                   <Trans>Buy POE</Trans>
                 </ExternalLink>
                 {active && (
@@ -1773,8 +1773,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Escrowed POE</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "totalEsAmpRewards", 18, 4, true)} ($
-                  {formatKeyAmount(processedData, "totalEsAmpRewardsUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "totalEsPoeRewards", 18, 4, true)} ($
+                  {formatKeyAmount(processedData, "totalEsPoeRewardsUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-row">
@@ -1848,15 +1848,15 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 <div className="label">
                   <Trans>Price</Trans>
                 </div>
-                <div>${formatKeyAmount(processedData, "alpPrice", USD_DECIMALS, 3, true)}</div>
+                <div>${formatKeyAmount(processedData, "plpPrice", USD_DECIMALS, 3, true)}</div>
               </div>
               <div className="App-card-row">
                 <div className="label">
                   <Trans>Wallet</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "alpBalance", ALP_DECIMALS, 2, true)} PLP ($
-                  {formatKeyAmount(processedData, "alpBalanceUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "plpBalance", ALP_DECIMALS, 2, true)} PLP ($
+                  {formatKeyAmount(processedData, "plpBalanceUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-row">
@@ -1864,8 +1864,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "alpBalance", ALP_DECIMALS, 2, true)} PLP ($
-                  {formatKeyAmount(processedData, "alpBalanceUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "plpBalance", ALP_DECIMALS, 2, true)} PLP ($
+                  {formatKeyAmount(processedData, "plpBalanceUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-divider"></div>
@@ -1875,19 +1875,19 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 </div>
                 <div>
                   <Tooltip
-                    handle={`${formatKeyAmount(processedData, "alpAprTotal", 2, 2, true)}%`}
+                    handle={`${formatKeyAmount(processedData, "plpAprTotal", 2, 2, true)}%`}
                     position="right-bottom"
                     renderContent={() => {
                       return (
                         <>
                           <StatsTooltipRow
                             label={`${nativeTokenSymbol} (${wrappedTokenSymbol}) APR`}
-                            value={`${formatKeyAmount(processedData, "alpAprForNativeToken", 2, 2, true)}%`}
+                            value={`${formatKeyAmount(processedData, "plpAprForNativeToken", 2, 2, true)}%`}
                             showDollar={false}
                           />
                           <StatsTooltipRow
                             label="Escrowed POE APR"
-                            value={`${formatKeyAmount(processedData, "alpAprForEsAmp", 2, 2, true)}%`}
+                            value={`${formatKeyAmount(processedData, "plpAprForEsPoe", 2, 2, true)}%`}
                             showDollar={false}
                           />
                           <br />
@@ -1907,7 +1907,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 </div>
                 <div>
                   <Tooltip
-                    handle={`$${formatKeyAmount(processedData, "totalAlpRewardsUsd", USD_DECIMALS, 2, true)}`}
+                    handle={`$${formatKeyAmount(processedData, "totalplpRewardsUsd", USD_DECIMALS, 2, true)}`}
                     position="right-bottom"
                     renderContent={() => {
                       return (
@@ -1919,19 +1919,19 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                               "feeAlpTrackerRewards",
                               18,
                               4
-                            )} ($${formatKeyAmount(processedData, "feeAlpTrackerRewardsUsd", USD_DECIMALS, 2, true)})`}
+                            )} ($${formatKeyAmount(processedData, "feeplpTrackerRewardsUsd", USD_DECIMALS, 2, true)})`}
                             showDollar={false}
                           />
                           <StatsTooltipRow
                             label="Escrowed POE"
                             value={`${formatKeyAmount(
                               processedData,
-                              "stakedAlpTrackerRewards",
+                              "stakedplpTrackerRewards",
                               18,
                               4
                             )} ($${formatKeyAmount(
                               processedData,
-                              "stakedAlpTrackerRewardsUsd",
+                              "stakedplpTrackerRewardsUsd",
                               USD_DECIMALS,
                               2,
                               true
@@ -1950,8 +1950,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Total Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "alpSupply", 18, 2, true)} PLP ($
-                  {formatKeyAmount(processedData, "alpSupplyUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "plpSupply", 18, 2, true)} PLP ($
+                  {formatKeyAmount(processedData, "plpSupplyUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-row">
@@ -1959,8 +1959,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Total Supply</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "alpSupply", 18, 2, true)} PLP ($
-                  {formatKeyAmount(processedData, "alpSupplyUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "plpSupply", 18, 2, true)} PLP ($
+                  {formatKeyAmount(processedData, "plpSupplyUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-divider"></div>
@@ -2001,8 +2001,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Wallet</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "esAmpBalance", 18, 2, true)} esPOE ($
-                  {formatKeyAmount(processedData, "esAmpBalanceUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "esPoeBalance", 18, 2, true)} esPOE ($
+                  {formatKeyAmount(processedData, "esPoeBalanceUsd", USD_DECIMALS, 2, true)})
                 </div> 
               </div>
               <div className="App-card-row">
@@ -2010,8 +2010,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "esAmpInStakedAmp", 18, 2, true)} esPOE ($
-                  {formatKeyAmount(processedData, "esAmpInStakedAmpUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "esPoeInStakedAmp", 18, 2, true)} esPOE ($
+                  {formatKeyAmount(processedData, "esPoeInStakedAmpUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-divider"></div>
@@ -2041,7 +2041,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                             )}
                             <StatsTooltipRow
                               label="Escrowed POE APR"
-                              value={`${formatKeyAmount(processedData, "ampAprForEsAmp", 2, 2, true)}%`}
+                              value={`${formatKeyAmount(processedData, "poeAprForEsPoe", 2, 2, true)}%`}
                               showDollar={false}
                             />
                           </>
@@ -2061,8 +2061,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Total Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "stakedEsAmpSupply", 18, 0, true)} esPOE ($
-                  {formatKeyAmount(processedData, "stakedEsAmpSupplyUsd", USD_DECIMALS, 0, true)})
+                  {formatKeyAmount(processedData, "stakedEsPoeSupply", 18, 0, true)} esPOE ($
+                  {formatKeyAmount(processedData, "stakedEsPoeSupplyUsd", USD_DECIMALS, 0, true)})
                 </div>
               </div>
               <div className="App-card-row">
@@ -2107,7 +2107,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
               Convert esPOE tokens to POE tokens.
               <br />
               Please read the{" "}
-              <a href="https://amped.gitbook.io/" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 vesting details
               </a>{" "}
               before using the vaults.
@@ -2257,9 +2257,9 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   </div>
                   <div>
                     <Tooltip
-                      handle={`${formatKeyAmount(vestingData, "alpVesterClaimSum", 18, 4, true)} / ${formatKeyAmount(
+                      handle={`${formatKeyAmount(vestingData, "plpVesterClaimSum", 18, 4, true)} / ${formatKeyAmount(
                         vestingData,
-                        "alpVesterVestedAmount",
+                        "plpVesterVestedAmount",
                         18,
                         4,
                         true
@@ -2269,9 +2269,9 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                         return (
                           <div>
                             <Trans>
-                              {formatKeyAmount(vestingData, "alpVesterClaimSum", 18, 4, true)} tokens have been
+                              {formatKeyAmount(vestingData, "plpVesterClaimSum", 18, 4, true)} tokens have been
                               converted to POE from the{" "}
-                              {formatKeyAmount(vestingData, "alpVesterVestedAmount", 18, 4, true)} esPOE deposited for
+                              {formatKeyAmount(vestingData, "plpVesterVestedAmount", 18, 4, true)} esPOE deposited for
                               vesting.
                             </Trans>
                           </div>
@@ -2286,11 +2286,11 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   </div>
                   <div>
                     <Tooltip
-                      handle={`${formatKeyAmount(vestingData, "alpVesterClaimable", 18, 4, true)} POE`}
+                      handle={`${formatKeyAmount(vestingData, "plpVesterClaimable", 18, 4, true)} POE`}
                       position="right-bottom"
                       renderContent={() => (
                         <Trans>
-                          {formatKeyAmount(vestingData, "alpVesterClaimable", 18, 4, true)} POE tokens can be claimed,
+                          {formatKeyAmount(vestingData, "plpVesterClaimable", 18, 4, true)} POE tokens can be claimed,
                           use the options under the Total Rewards section to claim them.
                         </Trans>
                       )}
