@@ -330,7 +330,7 @@ export default function SwapBox(props) {
         </div>
         <div className="align-right">
           <Tooltip
-            handle={`$${formatAmount(toTokenInfo.maxAvailableLong, USD_DECIMALS, 4, true)}`}
+            handle={`$${formatAmount(toTokenInfo.maxAvailableLong, USD_DECIMALS, 6, true)}`}
             position="right-bottom"
             renderContent={() => {
               return (
@@ -1398,7 +1398,7 @@ export default function SwapBox(props) {
       Created limit order for ${indexToken.symbol} ${isLong ? "Long" : "Short"}: ${formatAmount(
       toUsdMax,
       USD_DECIMALS,
-      2
+      6
     )} USD!
     `;
     return Api.createIncreaseOrder(
@@ -1535,7 +1535,7 @@ export default function SwapBox(props) {
     const successMsg = t`Requested increase of ${tokenSymbol} ${longOrShortText} by ${formatAmount(
       toUsdMax,
       USD_DECIMALS,
-      2
+      6
     )} USD.`;
     
     callContract(chainId, contract, method, params, {
@@ -2110,11 +2110,11 @@ export default function SwapBox(props) {
               <div className="align-right">
                 {hasExistingPosition && toAmount && toAmount.gt(0) && (
                   <div className="inline-block muted">
-                    ${formatAmount(existingPosition.averagePrice, USD_DECIMALS, 4, true)}
+                    ${formatAmount(existingPosition.averagePrice, USD_DECIMALS, 6, true)}
                     <BsArrowRight className="transition-arrow" />
                   </div>
                 )}
-                {nextAveragePrice && `$${formatAmount(nextAveragePrice, USD_DECIMALS, 4, true)}`}
+                {nextAveragePrice && `$${formatAmount(nextAveragePrice, USD_DECIMALS, 6, true)}`}
                 {!nextAveragePrice && `-`}
               </div>
             </div>
@@ -2125,13 +2125,13 @@ export default function SwapBox(props) {
               <div className="align-right">
                 {hasExistingPosition && toAmount && toAmount.gt(0) && (
                   <div className="inline-block muted">
-                    ${formatAmount(existingLiquidationPrice, USD_DECIMALS, 4, true)}
+                    ${formatAmount(existingLiquidationPrice, USD_DECIMALS, 6, true)}
                     <BsArrowRight className="transition-arrow" />
                   </div>
                 )}
                 {toAmount &&
                   displayLiquidationPrice &&
-                  `$${formatAmount(displayLiquidationPrice, USD_DECIMALS, 4, true)}`}
+                  `$${formatAmount(displayLiquidationPrice, USD_DECIMALS, 6, true)}`}
                 {!toAmount && displayLiquidationPrice && `-`}
                 {!displayLiquidationPrice && `-`}
               </div>
@@ -2152,7 +2152,7 @@ export default function SwapBox(props) {
                               <br />
                               <StatsTooltipRow
                                 label={t`Swap ${fromToken.symbol} to ${collateralToken.symbol} Fee`}
-                                value={formatAmount(swapFees, USD_DECIMALS, 4, true)}
+                                value={formatAmount(swapFees, USD_DECIMALS, 6, true)}
                               />
                               <br />
                             </div>
@@ -2160,7 +2160,7 @@ export default function SwapBox(props) {
                           <div>
                             <StatsTooltipRow
                               label={t`Position Fee (0.1% of position size)`}
-                              value={formatAmount(positionFee, USD_DECIMALS, 4, true)}
+                              value={formatAmount(positionFee, USD_DECIMALS, 6, true)}
                             />
                           </div>
                         </div>
@@ -2265,7 +2265,7 @@ export default function SwapBox(props) {
             </div>
             <div className="align-right">
               <Tooltip
-                handle={`$${formatAmount(entryMarkPrice, USD_DECIMALS, 4, true)}`}
+                handle={`$${formatAmount(entryMarkPrice, USD_DECIMALS, 6, true)}`}
                 position="right-bottom"
                 renderContent={() => {
                   return (
@@ -2295,7 +2295,7 @@ export default function SwapBox(props) {
             </div>
             <div className="align-right">
               <Tooltip
-                handle={`$${formatAmount(exitMarkPrice, USD_DECIMALS, 4, true)}`}
+                handle={`$${formatAmount(exitMarkPrice, USD_DECIMALS, 6, true)}`}
                 position="right-bottom"
                 renderContent={() => {
                   return (

@@ -289,7 +289,7 @@ export default function ExchangeTVChart(props) {
           const color = "#3a3e5e";
           lines.push(
             currentSeries.createPriceLine({
-              price: parseFloat(formatAmount(order.triggerPrice, USD_DECIMALS, symbol === "CRO" || symbol === "ADA" || symbol === "DOGE" ? 4 : 2)),
+              price: parseFloat(formatAmount(order.triggerPrice, USD_DECIMALS, symbol === "TREAT" || symbol === "SHIB" ? 6 : 2)),
               color,
               title: title.padEnd(PRICE_LINE_TEXT_WIDTH, " "),
             })
@@ -302,7 +302,7 @@ export default function ExchangeTVChart(props) {
           const longOrShortText = position.isLong ? t`Long` : t`Short`;
           lines.push(
             currentSeries.createPriceLine({
-              price: parseFloat(formatAmount(position.averagePrice, USD_DECIMALS, symbol === "CRO" || symbol === "ADA" || symbol === "DOGE" ? 4 : 2)),
+              price: parseFloat(formatAmount(position.averagePrice, USD_DECIMALS, symbol === "TREAT" || symbol === "SHIB" ? 6 : 2)),
               color,
               title: t`Open ${position.indexToken.symbol} ${longOrShortText}`.padEnd(PRICE_LINE_TEXT_WIDTH, " "),
             })
@@ -311,7 +311,7 @@ export default function ExchangeTVChart(props) {
           const liquidationPrice = getLiquidationPrice(position);
           lines.push(
             currentSeries.createPriceLine({
-              price: parseFloat(formatAmount(liquidationPrice, USD_DECIMALS, symbol === "CRO" || symbol === "ADA" || symbol === "DOGE" ? 4 : 2)),
+              price: parseFloat(formatAmount(liquidationPrice, USD_DECIMALS, symbol === "TREAT" || symbol === "SHIB" ? 6 : 2)),
               color,
               title: t`Liq. ${position.indexToken.symbol} ${longOrShortText}`.padEnd(PRICE_LINE_TEXT_WIDTH, " "),
             })
@@ -391,7 +391,7 @@ export default function ExchangeTVChart(props) {
   }
 
   if (deltaPrice && currentAveragePrice) {
-    const average = parseFloat(formatAmount(currentAveragePrice, USD_DECIMALS, symbol === "CRO" || symbol === "ADA" || symbol === "DOGE" ? 4 : 2));
+    const average = parseFloat(formatAmount(currentAveragePrice, USD_DECIMALS, symbol === "TREAT" || symbol === "SHIB" ? 6 : 2));
     delta = average - deltaPrice;
     deltaPercentage = (delta * 100) / average;
     if (deltaPercentage > 0) {
@@ -432,10 +432,10 @@ export default function ExchangeTVChart(props) {
           </div>
           <div>
             <div className="ExchangeChart-main-price">
-              {chartToken.maxPrice && formatAmount(chartToken.maxPrice, USD_DECIMALS, symbol === "CRO" || symbol === "ADA" || symbol === "DOGE" ? 4 : 2, true)}
+              {chartToken.maxPrice && formatAmount(chartToken.maxPrice, USD_DECIMALS, symbol === "TREAT" || symbol === "SHIB" || symbol === "DOGE" ? 6 : 2, true)}
             </div>
             <div className="ExchangeChart-info-label">
-              ${chartToken.minPrice && formatAmount(chartToken.minPrice, USD_DECIMALS, symbol === "CRO" || symbol === "ADA" || symbol === "DOGE" ? 4 : 2, true)}
+              ${chartToken.minPrice && formatAmount(chartToken.minPrice, USD_DECIMALS, symbol === "TREAT" || symbol === "SHIB" ? 6 : 2, true)}
             </div>
           </div>
           <div>

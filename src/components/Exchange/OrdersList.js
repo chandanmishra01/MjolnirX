@@ -272,7 +272,7 @@ export default function OrdersList(props) {
                   return (
                     <StatsTooltipRow
                       label={t`Collateral`}
-                      value={`${formatAmount(collateralUSD, USD_DECIMALS, 2, true)} (${formatAmount(
+                      value={`${formatAmount(collateralUSD, USD_DECIMALS, 6, true)} (${formatAmount(
                         order.purchaseTokenAmount,
                         collateralTokenInfo.decimals,
                         4,
@@ -286,11 +286,11 @@ export default function OrdersList(props) {
             )}
           </td>
           <td>
-            {triggerPricePrefix} {formatAmount(order.triggerPrice, USD_DECIMALS, 2, true)}
+            {triggerPricePrefix} {formatAmount(order.triggerPrice, USD_DECIMALS, 6, true)}
           </td>
           <td>
             <Tooltip
-              handle={formatAmount(markPrice, USD_DECIMALS, 2, true)}
+              handle={formatAmount(markPrice, USD_DECIMALS, 6, true)}
               position="right-bottom"
               renderContent={() => {
                 return (

@@ -68,7 +68,7 @@ export default function OrderEditor(props) {
   }
   const [triggerRatioValue, setTriggerRatioValue] = useState(formatAmountFree(initialRatio, USD_DECIMALS, 6));
 
-  const [triggerPriceValue, setTriggerPriceValue] = useState(formatAmountFree(order.triggerPrice, USD_DECIMALS, 4));
+  const [triggerPriceValue, setTriggerPriceValue] = useState(formatAmountFree(order.triggerPrice, USD_DECIMALS, 6));
   const triggerPrice = useMemo(() => {
     return triggerPriceValue ? parseValue(triggerPriceValue, USD_DECIMALS) : 0;
   }, [triggerPriceValue]);
@@ -242,10 +242,10 @@ export default function OrderEditor(props) {
             <div
               className="muted align-right clickable"
               onClick={() => {
-                setTriggerPriceValue(formatAmountFree(indexTokenMarkPrice, USD_DECIMALS, 2));
+                setTriggerPriceValue(formatAmountFree(indexTokenMarkPrice, USD_DECIMALS, 6));
               }}
             >
-              <Trans>Mark: {formatAmount(indexTokenMarkPrice, USD_DECIMALS, 2)}</Trans>
+              <Trans>Mark: {formatAmount(indexTokenMarkPrice, USD_DECIMALS, 6)}</Trans>
             </div>
           </div>
           <div className="Exchange-swap-section-bottom">
@@ -266,16 +266,16 @@ export default function OrderEditor(props) {
           {triggerPrice && !triggerPrice.eq(order.triggerPrice) ? (
             <>
               <span className="muted">
-                {triggerPricePrefix} {formatAmount(order.triggerPrice, USD_DECIMALS, 2, true)}
+                {triggerPricePrefix} {formatAmount(order.triggerPrice, USD_DECIMALS, 6, true)}
               </span>
               &nbsp;
               <BsArrowRight />
               &nbsp;
-              {triggerPricePrefix} {formatAmount(triggerPrice, USD_DECIMALS, 2, true)}
+              {triggerPricePrefix} {formatAmount(triggerPrice, USD_DECIMALS, 6, true)}
             </>
           ) : (
             <span>
-              {triggerPricePrefix} {formatAmount(order.triggerPrice, USD_DECIMALS, 2, true)}
+              {triggerPricePrefix} {formatAmount(order.triggerPrice, USD_DECIMALS, 6, true)}
             </span>
           )}
         </ExchangeInfoRow>
@@ -284,7 +284,7 @@ export default function OrderEditor(props) {
             <div className="Exchange-info-label">
               <Trans>Liq. Price</Trans>
             </div>
-            <div className="align-right">{`$${formatAmount(liquidationPrice, USD_DECIMALS, 2, true)}`}</div>
+            <div className="align-right">{`$${formatAmount(liquidationPrice, USD_DECIMALS, 6, true)}`}</div>
           </div>
         )}
         <div className="Exchange-swap-button-container">
@@ -322,7 +322,7 @@ export default function OrderEditor(props) {
               }}
             >
               <Trans>Mark Price: </Trans>
-              {formatAmount(getExchangeRate(fromTokenInfo, toTokenInfo, triggerRatioInverted), USD_DECIMALS, 4)}
+              {formatAmount(getExchangeRate(fromTokenInfo, toTokenInfo, triggerRatioInverted), USD_DECIMALS, 6)}
             </div>
           )}
         </div>
@@ -387,7 +387,7 @@ export default function OrderEditor(props) {
           <div className="Exchange-info-label">
             <Trans>{fromTokenInfo.symbol} price</Trans>
           </div>
-          <div className="align-right">{formatAmount(fromTokenInfo.minPrice, USD_DECIMALS, 2, true)} USD</div>
+          <div className="align-right">{formatAmount(fromTokenInfo.minPrice, USD_DECIMALS, 6, true)} USD</div>
         </div>
       )}
       {toTokenInfo && (
@@ -395,7 +395,7 @@ export default function OrderEditor(props) {
           <div className="Exchange-info-label">
             <Trans>{toTokenInfo.symbol} price</Trans>
           </div>
-          <div className="align-right">{formatAmount(toTokenInfo.maxPrice, USD_DECIMALS, 2, true)} USD</div>
+          <div className="align-right">{formatAmount(toTokenInfo.maxPrice, USD_DECIMALS, 6, true)} USD</div>
         </div>
       )}
       <div className="Exchange-swap-button-container">
