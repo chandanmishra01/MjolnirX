@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-
+import './PrecisionSection.css'
 
 const PrecisionSection = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
