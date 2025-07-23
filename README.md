@@ -11,7 +11,7 @@ In the project directory, you can run :
 Installs dependencies
 
 At first installation, you might have to run `yarn husky install`,
-to setup pre-commit hooks
+to setup pre-commit hoo
 
 ### `yarn start`
 
