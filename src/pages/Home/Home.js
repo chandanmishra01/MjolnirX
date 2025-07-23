@@ -73,7 +73,7 @@ export default function Home() {
                 </div> */}
 
                 <div className="hero-actions">
-                  <a href="#" className="btn btn-primary btn-hero">Start Trading →</a>
+                  <a href="#/trade" className="btn btn-primary btn-hero">Start Trading →</a>
                   <a href="#" className="btn btn-outline btn-hero">View Docs</a>
                 </div>
 

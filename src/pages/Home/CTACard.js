@@ -43,7 +43,7 @@ const CTACard = () => {
 
   const handleLaunchClick = () => {
     // Handle launch platform action
-    console.log('Launch Platform clicked');
+    window.open('#/trade', '_blank');
   };
 
   return (

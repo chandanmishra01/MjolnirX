@@ -1965,10 +1965,10 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
               </div>
               <div className="App-card-divider"></div>
               <div className="App-card-options">
-                <Link className="App-card-option button-primary" to="/buy_alp">
+                <Link className="App-card-option button-primary" to="/buy_mlp">
                   <Trans>Buy MLP</Trans>
                 </Link>
-                <Link className="App-card-option button-primary" to="/buy_alp#redeem">
+                <Link className="App-card-option button-primary" to="/buy_mlp#redeem">
                   <Trans>Sell MLP</Trans>
                 </Link>
                 {/* {hasInsurance && (

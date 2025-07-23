@@ -111,7 +111,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </div>
           <div className="Home-token-card-option-action">
             <div className="buy">
-              <BuyLink to="/buy_alp" className="button-primary" network={chainId}>
+              <BuyLink to="/buy_mlp" className="button-primary" network={chainId}>
                 <Trans>Buy</Trans>
               </BuyLink>
               {/* <BuyLink to="/buy_alp" className="default-btn" network={GOERLI_TESTNET}>

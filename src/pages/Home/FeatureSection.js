@@ -49,7 +49,7 @@ const FeatureSection = () => {
               ))}
             </ul>
             
-            <a href="#" className="cta-button">Explore Platform</a>
+            <a href="#/trade" className="cta-button">Explore Platform</a>
           </div>
           
           <div className="dashboard-preview">
