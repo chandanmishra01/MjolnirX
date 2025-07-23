@@ -69,11 +69,11 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
     <div className="Home-token-card-options">
       <div className="Home-token-card-option">
         <div className="Home-token-card-option-icon">
-          <img src={poeBigIcon} alt="bluBigIcon" /> POE
+          <img src={poeBigIcon} alt="bluBigIcon" /> MJX
         </div>
         <div className="Home-token-card-option-info">
           <div className="Home-token-card-option-title">
-            <Trans>POE is the utility and governance token. Accrues 30% of the platform's generated fees.</Trans>
+            <Trans>MJX is the utility and governance token. Accrues 30% of the platform's generated fees.</Trans>
           </div>
           <div className="Home-token-card-option-apr">
             {`${getChainName(chainId)} APR:`} <APRLabel chainId={chainId} label="ampAprTotal" key={getChainName(chainId)} />{" "}
@@ -99,11 +99,11 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
       </div>
       <div className="Home-token-card-option">
         <div className="Home-token-card-option-icon">
-          <img src={plpBigIcon} alt="blpBigIcon" /> PLP
+          <img src={plpBigIcon} alt="blpBigIcon" /> MLP
         </div>
         <div className="Home-token-card-option-info">
           <div className="Home-token-card-option-title">
-            <Trans>PLP is the liquidity provider token. Accrues 70% of the platform's generated fees.</Trans>
+            <Trans>MLP is the liquidity provider token. Accrues 70% of the platform's generated fees.</Trans>
           </div>
           <div className="Home-token-card-option-apr">
             {`${getChainName(chainId)} APR:`} <APRLabel chainId={chainId} label="alpAprTotal" key={getChainName(chainId)} />{" "}

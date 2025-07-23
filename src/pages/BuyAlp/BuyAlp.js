@@ -28,15 +28,15 @@ export default function BuyAlp(props) {
     <div className="default-container page-layout">
       <div className="section-title-block">
         <div className="section-title-icon">
-          <img src={buyALPIcon} alt={t`Buy PLP Icon`} />
+          <img src={buyALPIcon} alt={t`Buy MLP Icon`} />
         </div>
         <div className="section-title-content">
           <div className="Page-title">
-            <Trans>Buy / Sell PLP</Trans>
+            <Trans>Buy / Sell MLP</Trans>
           </div>
           <div className="Page-description">
             {/* <Trans> */}
-              Purchase <ExternalLink href="#">PLP tokens</ExternalLink> to earn{" "}
+              Purchase <ExternalLink href="#">MLP tokens</ExternalLink> to earn{" "}
               {nativeTokenSymbol} fees from swaps and leverages trading.
             {/* </Trans> */}
             <br />

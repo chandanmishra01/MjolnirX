@@ -17,11 +17,11 @@ export default function ReferralTerms() {
           <div className="content">
             <div className="section">
               <p className="body-text">
-                Welcome to amped.finance ("we," "us," or "our"), the informational resource for AMP Protocol, as defined below.
+                Welcome to MjolnirX ("we," "us," or "our"), the informational resource for AMP Protocol, as defined below.
               </p>
               <p className="body-text">
-              amped.finance provides information and resources about the fundamentals of the decentralized non-custodial
-                protocol called the AMP Protocol (the "AMP Protocol," "Protocol," or "AMP DApp"). amped.finance is not an
+              MjolnirX provides information and resources about the fundamentals of the decentralized non-custodial
+                protocol called the AMP Protocol (the "AMP Protocol," "Protocol," or "AMP DApp"). Mjolnir is not an
                 available access point to the AMP Protocol.
               </p>
               <p className="body-text">
@@ -61,7 +61,7 @@ export default function ReferralTerms() {
                 the AMP Protocol.
               </p>
               <p className="body-text">
-                2.2 amped.finance is not responsible for (i) lost sales or lost opportunity to earn Rebates due to any cause,
+                2.2 MjolnirX is not responsible for (i) lost sales or lost opportunity to earn Rebates due to any cause,
                 such as technical difficulties or over-capacity, including system overload in the Arbitrum or Avalanche
                 blockchains; (ii) tracking Rebates, Discounts, or any other data, as this is handled by independent,
                 smart contracts.
@@ -82,7 +82,7 @@ export default function ReferralTerms() {
                 will never be retroactive.
               </p>
               <p className="body-text">
-              amped.finance is under no obligation for Rebates or Discounts to any Referrer or Trader. Rebates and Discounts
+              MjolnirX is under no obligation for Rebates or Discounts to any Referrer or Trader. Rebates and Discounts
                 are handled following the directives of the AMP tokenholders.
               </p>
               <p className="body-text">
@@ -96,7 +96,7 @@ export default function ReferralTerms() {
             <div className="section">
               <h3 className="body-title">4. LIMITATION OF LIABILITY</h3>
               <p className="body-text">
-                Under no circumstances shall amped.finance be liable for any direct, indirect, incidental, punitive, special,
+                Under no circumstances shall MjolnirX be liable for any direct, indirect, incidental, punitive, special,
                 consequential damages, or similar damages or liabilities whatsoever for any reason whatsoever related to
                 these Terms, your use or inability to use our web site(s), or the materials and content of the web
                 site(s) or any other web sites linked to such web site(s) or your provision of any personally
@@ -106,18 +106,18 @@ export default function ReferralTerms() {
                 damages were reasonably foreseeable.
               </p>
               <p className="body-text">
-                In no event shall amped.finance's aggregate liability arising out of or in connection with the Site exceed five
+                In no event shall MjolnirX's aggregate liability arising out of or in connection with the Site exceed five
                 hundred Singapore Dollars (500 SGD).
               </p>
             </div>
             <div className="section">
               <h3 className="body-title">5. INDEMNIFICATION</h3>
               <p className="body-text">
-                You will defend, indemnify, and hold harmless amped.finance, its affiliates, members, member, managers,
+                You will defend, indemnify, and hold harmless MjolnirX, its affiliates, members, member, managers,
                 employees, attorneys, representatives, suppliers, and contractors from any claim, demand, lawsuit,
                 action, proceeding, investigation, liability, damage, loss, cost or expense, including without
                 limitation reasonable attorneys' fees, arising out of or relating to arising under these Terms, the
-                service(s) provided by amped.finance, or your use of the service(s) provided by amped.finance, including, without
+                service(s) provided by MjolnirX, or your use of the service(s) provided by MjolnirX, including, without
                 limitation, an infringement by you, or by anyone else using such service(s) we provide to you, of any
                 intellectual property or other proprietary rights of any person or entity, or from the violation of any
                 of our operating rules or policies relating to the service(s) provided. When we may be involved in a
@@ -132,19 +132,19 @@ export default function ReferralTerms() {
             <div className="section">
               <h3 className="body-title">6. MODIFICATION, SUSPENSION, AND TERMINATION</h3>
               <p className="body-text">
-                The Referral Program runs independently from amped.finance, which the token holders of AMP determine. Due to
+                The Referral Program runs independently from MjolnirX, which the token holders of AMP determine. Due to
                 this, from time to time and with or without prior notice to you, the Referral Program could be subject
                 to modifications, suspensions, or disabilities, in whole or in part, for any reason whatsoever.
               </p>
               <p className="body-text">
-              amped.finance will not be liable for any losses suffered by you resulting from any modification to the Referral
+              MjolnirX will not be liable for any losses suffered by you resulting from any modification to the Referral
                 Program or from any modification, suspension, or termination, for any reason, of your access to all or
                 any portion of the Interface or the Protocol.
               </p>
               <p className="body-text">
-              amped.finance may revise these Terms from time to time. We will notify you by updating the date at the top of
+              MjolnirX may revise these Terms from time to time. We will notify you by updating the date at the top of
                 the Terms and maintaining a current version. The most current version of the Terms will always be at
-                https://amped.finance/#/referral-terms. All modifications will be effective when they are posted. By using the
+                #. All modifications will be effective when they are posted. By using the
                 Referral Program after those revisions become effective, you agree to be bound by the revised Terms.
               </p>
             </div>
@@ -160,7 +160,7 @@ export default function ReferralTerms() {
               <h3 className="body-title">8. GENERAL</h3>
               <p className="body-text">
                 8.1 These Terms, including other policies or agreements incorporated herein, constitute the entire and
-                only agreement between you and amped.finance concerning the subject matter of these Terms and supersede all
+                only agreement between you and MjolnirX concerning the subject matter of these Terms and supersede all
                 prior or contemporaneous agreements, representations, warranties, and understandings, written or oral,
                 concerning the subject matter of these Terms. Any failure by us to exercise or enforce any right or
                 provision of the Terms shall not constitute a waiver of such right or provision.
@@ -178,18 +178,18 @@ export default function ReferralTerms() {
               <p className="body-text">
                 8.4 If any provision of these Terms shall be unenforceable or invalid under any applicable law or be
                 held by any applicable court decision, such unenforceability or invalidity shall not render these Terms
-                unenforceable or invalid as a whole. amped.finance will amend or replace such provision with one that is valid
+                unenforceable or invalid as a whole. MjolnirX will amend or replace such provision with one that is valid
                 and enforceable and which achieves, to the extent possible, our original objectives and intent as
                 reflected in the original provision.
               </p>
               <p className="body-text">
                 8.5 You may not assign or transfer any right to use the Referral Program, or any of your rights or
                 obligations under these Terms, without our express prior written consent, including by operation of law
-                or in connection with any change of control. amped.finance may assign or transfer any or all of our rights or
+                or in connection with any change of control. MjolnirX may assign or transfer any or all of our rights or
                 obligations under these Terms, in whole or part, without notice or obtaining your consent or approval.
               </p>
               <p className="body-text">
-                8.6 amped.finance will have no responsibility or liability for any failure or delay in performance of the Site,
+                8.6 MjolnirX will have no responsibility or liability for any failure or delay in performance of the Site,
                 or any loss or damage that you may incur, due to any circumstance or event beyond our control, including
                 without limitation any flood, extraordinary weather conditions, earthquake, or other act of God, fire,
                 war, insurrection, riot, labor dispute, accident, any law, order regulation, direction, action or
@@ -199,7 +199,7 @@ export default function ReferralTerms() {
             <div className="section">
               <h3 className="body-title">9. CONTACT INFORMATION</h3>
               <p className="body-text">
-                If you have any questions about these Terms, the Site, or the Interface, please get in touch with amped.finance
+                If you have any questions about these Terms, the Site, or the Interface, please get in touch with MjolnirX
                 on any of our official channels.
               </p>
             </div>

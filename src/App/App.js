@@ -527,8 +527,8 @@ function FullApp() {
           {!isHome && (
             <Switch>
               <Route exact path="/">
-                {/* <Home /> */}
-                <Exchange
+                <Home />
+                {/* <Exchange
                   ref={exchangeRef}
                   savedShowPnlAfterFees={savedShowPnlAfterFees}
                   savedIsPnlInLeverage={savedIsPnlInLeverage}
@@ -540,7 +540,7 @@ function FullApp() {
                   setSavedShouldShowPositionLines={setSavedShouldShowPositionLines}
                   connectWallet={connectWallet}
                   savedShouldDisableValidationForTesting={savedShouldDisableValidationForTesting}
-                />
+                /> */}
               </Route>
               <Route exact path="/trade">
                 <Exchange

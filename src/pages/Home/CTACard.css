@@ -1,0 +1,389 @@
+/* CTA Card Component CSS */
+.cta-card-section {
+    padding: 6rem 2rem 8rem 2rem;
+    background: linear-gradient(180deg, #1a1a1a 0%, #151515 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  /* 3D Card Styling */
+  .cta-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 24px;
+    padding: 4rem 3rem;
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    transform: perspective(1000px) rotateX(3deg) rotateY(-1deg);
+    box-shadow: 
+      0 25px 50px rgba(0, 0, 0, 0.5),
+      0 10px 20px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(20px);
+    margin-bottom: 18rem;
+  }
+  
+  .cta-card:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(-1deg) translateY(-10px);
+    box-shadow: 
+        0 35px 70px rgba(0, 0, 0, 0.6),
+        0 15px 30px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        0 0 0 1px rgba(255, 107, 53, 0.2);
+  }
+  
+  /* Card Glow Effect */
+  .card-glow {
+     position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e, #ff6b35);
+            border-radius: 24px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+            filter: blur(10px);
+  }
+  
+  /* Card Content */
+  .card-title_main {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .title-highlight {
+    color: #ff6b35;
+    position: relative;
+  }
+  
+  .card-description_main {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    color: #a0a0a0;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .card-button {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    font-family: inherit;
+  }
+  
+  .card-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  .card-button:hover::before {
+    left: 100%;
+  }
+  
+  .card-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+  }
+  
+  .card-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  }
+  
+  /* 3D Card Shadow Effect */
+  .cta-card::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 10%;
+    right: 10%;
+    height: 20px;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
+    filter: blur(15px);
+    z-index: -2;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background: #111111;
+    padding: 3rem 2rem 2rem 2rem;
+    border-top: 1px solid #333;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .social-link {
+    width: 48px;
+    height: 48px;
+    background: #2a2a2a;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+  }
+  
+  .social-link:hover {
+    background: #333;
+    color: #ff6b35;
+    transform: translateY(-2px);
+    border-color: #444;
+  }
+  
+  .social-link:focus {
+    outline: 2px solid #ff6b35;
+    outline-offset: 2px;
+  }
+  
+  .footer-text {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  /* Background Effects */
+  .bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255, 107, 53, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(247, 147, 30, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  .floating-orbs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+    animation: float 20s ease-in-out infinite;
+  }
+  
+  .orb-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  
+  .orb-2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 10s;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(-30px) rotate(180deg);
+      opacity: 0.6;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .cta-card-section {
+      padding: 5rem 1.5rem 6rem 1.5rem;
+    }
+  
+    .cta-card {
+      padding: 3.5rem 2.5rem;
+      max-width: 700px;
+    }
+  
+    .card-title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cta-card-section {
+      padding: 4rem 1rem 6rem 1rem;
+      min-height: 50vh;
+    }
+  
+    .cta-card {
+      padding: 3rem 2rem;
+      transform: perspective(800px) rotateX(2deg);
+      border-radius: 20px;
+      margin-bottom: 3rem;
+    }
+  
+    .cta-card:hover {
+      transform: perspective(800px) rotateX(1deg) translateY(-3px);
+    }
+  
+    .card-title {
+      font-size: 2.2rem;
+    }
+  
+    .card-description {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  
+    .card-button {
+      padding: 0.9rem 2rem;
+      font-size: 0.95rem;
+    }
+  
+    .social-links {
+      gap: 1.5rem;
+    }
+  
+    .social-link {
+      width: 44px;
+      height: 44px;
+    }
+  
+    .footer {
+      padding: 2.5rem 1rem 1.5rem 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cta-card-section {
+      padding: 3rem 1rem 4rem 1rem;
+    }
+  
+    .cta-card {
+      padding: 2.5rem 1.5rem;
+      transform: perspective(600px) rotateX(1deg);
+    }
+  
+    .cta-card:hover {
+      transform: perspective(600px) rotateX(0.5deg) translateY(-2px);
+    }
+  
+    .card-title {
+      font-size: 1.8rem;
+    }
+  
+    .card-description {
+      font-size: 0.95rem;
+    }
+  
+    .card-button {
+      padding: 0.8rem 1.8rem;
+      font-size: 0.9rem;
+    }
+  
+    .social-links {
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+  
+    .social-link {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .footer {
+      padding: 2rem 1rem 1rem 1rem;
+    }
+  
+    .footer-text {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Accessibility Improvements */
+  @media (prefers-reduced-motion: reduce) {
+    .cta-card {
+      transition: none;
+      animation: none;
+    }
+    
+    .orb {
+      animation: none;
+    }
+    
+    .card-button::before {
+      transition: none;
+    }
+  }
+  
+  /* Focus States */
+  .card-button:focus {
+    outline: 2px solid #ff6b35;
+    outline-offset: 2px;
+  }
+  
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+    .cta-card {
+      border: 2px solid #fff;
+    }
+    
+    .card-title {
+      color: #fff;
+    }
+    
+    .title-highlight {
+      color: #ff6b35;
+      text-decoration: underline;
+    }
+  }

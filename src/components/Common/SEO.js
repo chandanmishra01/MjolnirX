@@ -6,9 +6,9 @@ function SEO(props) {
   const {chainId} = useChainId()
   const { children, ...customMeta } = props;
   const meta = {
-    title: "Amped Finance | Decentralised Trading Platform",
+    title: "Mjolnir Exchange | Decentralised Trading Platform",
     description:
-      `Trade spot or perpetual BTC, ETH and other cryptocurrencies with up to 20x leverage directly from your wallet on ${getChainName(chainId)}.`,
+      `Trade spot or perpetual BTC, ETH and other cryptocurrencies with up to 8x leverage directly from your wallet on ${getChainName(chainId)}.`,
     image: "https://amp.io/og.png",
     type: "exchange",
     ...customMeta,

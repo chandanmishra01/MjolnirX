@@ -1376,7 +1376,7 @@ export function getProcessedData(
 
 export function getPageTitle(data) {
   return `${data} | Decentralized
-  Perpetual Exchange | POE`;
+  Perpetual Exchange | MJX`;
 }
 
 export function isHashZero(value) {

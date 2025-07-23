@@ -150,7 +150,7 @@ function Leaderboard() {
                   Season 1 will commence on Monday the 9th of September and conclude on Monday the 30th of September.
                 </div>
                 <div>
-                  There are 50,00 BONE tokens to be distributed among participants who make the leaderboard! The higher your rank, the more you will receive.
+                  There are 10 ETH tokens to be distributed among participants who make the leaderboard! The higher your rank, the more you will receive.
                 </div>
               </Trans>
             </div>

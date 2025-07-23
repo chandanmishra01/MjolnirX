@@ -123,7 +123,7 @@ export function getReferralCodeTradeUrl(referralCode) {
 }
 
 export function getTwitterShareUrl(referralCode) {
-  const message = ["Trying out trading on Positions Exchange, use leverage to trade $SHIB, $BONE, $TREAT, and $ETH 📈", "For fee discounts use:"];
+  const message = ["Trying out trading on Mjolnri Exchange, use leverage to trade $USDC, $WBTC, and $ETH 📈", "For fee discounts use:"];
   const shareURL = getReferralCodeTradeUrl(referralCode);
 
   return getTwitterIntentURL(message, shareURL);

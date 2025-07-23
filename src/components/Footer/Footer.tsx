@@ -28,12 +28,12 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { link: "#", name: "Twitter", icon: twitterIcon },
-  { link: "#", name: "Medium", icon: mediumIcon },
+  { link: "https://x.com/MjolnirExchange", name: "Twitter", icon: twitterIcon },
+  // { link: "#", name: "Medium", icon: mediumIcon },
   { link: "#", name: "Gitbook", icon: gitbookIcon },
   { link: "#", name: "Telegram", icon: telegramIcon },
-  { link: "#", name: "Discord", icon: discordIcon },
-  { link: "#", name: "Github", icon: githubIcon },
+  // { link: "#", name: "Discord", icon: discordIcon },
+  // { link: "#", name: "Github", icon: githubIcon },
 
 ];
 
@@ -78,7 +78,7 @@ export default function Footer({ showRedirectModal, redirectPopupTimestamp }: Pr
               </NavLink>
             );
           })} */}
-          © 2025 Positions Exchange. All rights reserved
+          © 2025 Mjolnir Exchange. All rights reserved
         </div>
       </div>
     </div>

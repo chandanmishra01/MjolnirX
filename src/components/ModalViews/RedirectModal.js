@@ -31,7 +31,7 @@ export function RedirectPopupModal({
       <br />
       <Trans>
         The website is a community deployed and maintained instance of the open source{" "}
-        <ExternalLink href="https://github.com/Amped-Dex/amped-interface">AMP front end</ExternalLink>, hosted and served on
+        <ExternalLink href="#">AMP front end</ExternalLink>, hosted and served on
         the distributed, peer-to-peer <ExternalLink href="https://ipfs.io/">IPFS network</ExternalLink>.
       </Trans>
       <br />
@@ -41,10 +41,10 @@ export function RedirectPopupModal({
         <ExternalLink href="#">docs</ExternalLink>.
         <br />
         <br />
-        By clicking Agree you accept the <ExternalLink href="https://amped.finance/#/terms-and-conditions">
+        By clicking Agree you accept the <ExternalLink href="#">
           T&Cs
         </ExternalLink>{" "}
-        and <ExternalLink href="https://amped.finance/#/referral-terms">Referral T&Cs</ExternalLink>.
+        and <ExternalLink href="#">Referral T&Cs</ExternalLink>.
         <br />
         <br />
       </Trans>

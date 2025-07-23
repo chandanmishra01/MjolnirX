@@ -114,14 +114,16 @@ export default function AlpSwap(props) {
     setIsBuying,
     savedShouldDisableValidationForTesting,
   } = props;
+  
   const history = useHistory();
   const swapLabel = isBuying ? "BuyAlp" : "SellAlp";
-  const tabLabel = isBuying ? t`Buy PLP` : t`Sell PLP`;
+  const tabLabel = isBuying ? t`Buy MLP` : t`Sell MLP`;
   const { chainId } = useChainId();
   const tokens = getTokens(chainId);
   const whitelistedTokens = getWhitelistedTokens(chainId);
   const tokenList = whitelistedTokens.filter((t) => !t.isWrapped);
   const visibleTokens = tokenList.filter((t) => !t.isTempHidden);
+  
   const [swapValue, setSwapValue] = useState("");
   const [alpValue, setAlpValue] = useState("");
   const [swapTokenAddress, setSwapTokenAddress] = useLocalStorageByChainId(
@@ -148,13 +150,13 @@ export default function AlpSwap(props) {
   const tokensForBalanceAndSupplyQuery = [stakedAlpTrackerAddress, usdgAddress];
 
   const tokenAddresses = tokens.map((token) => token.address);
-  const { isConnected: active, address: account } = useWeb3ModalAccount()
+  const { isConnected: active, address: account } = useWeb3ModalAccount();
   const { walletProvider } = useWeb3ModalProvider();
   const library = useMemo(() => {
     if (walletProvider) {
       return new ethers.providers.Web3Provider(walletProvider);      
     }
-  }, [walletProvider])
+  }, [walletProvider]);
 
   const { data: tokenBalances } = useSWR(
     [`AlpSwap:getTokenBalances:${active}`, chainId, readerAddress, "getTokenBalances", account || PLACEHOLDER_ACCOUNT],
@@ -162,14 +164,6 @@ export default function AlpSwap(props) {
       fetcher: contractFetcher(library, ReaderV2, [tokenAddresses]),
     }
   );
-
-
-  // const { data: balance } = useSWR(
-  //   [`Token:name:${active}`, chainId, 'address', "name"],
-  //   {
-  //     fetcher: contractFetcher(library, Token, []),
-  //   }
-  // );
 
   const { data: balancesAndSupplies } = useSWR(
     [
@@ -183,8 +177,6 @@ export default function AlpSwap(props) {
       fetcher: contractFetcher(library, ReaderV2, [tokensForBalanceAndSupplyQuery]),
     }
   );
-
-  
 
   const { data: aums } = useSWR([`AlpSwap:getAums:${active}`, chainId, alpManagerAddress, "getAums"], {
     fetcher: contractFetcher(library, AlpManager),
@@ -240,7 +232,6 @@ export default function AlpSwap(props) {
   const stakingData = getStakingData(stakingInfo);
 
   const redemptionTime = lastPurchaseTime ? lastPurchaseTime.add(ALP_COOLDOWN_DURATION) : undefined;
-  
   const inCooldownWindow = redemptionTime && parseInt(Date.now() / 1000) < redemptionTime;
 
   const alpSupply = balancesAndSupplies ? balancesAndSupplies[1] : bigNumberify(0);
@@ -437,9 +428,41 @@ export default function AlpSwap(props) {
     totalTokenWeights,
   ]);
 
+  // Enhanced switchSwapOption function with better debugging and state management
   const switchSwapOption = (hash = "") => {
+    console.log('switchSwapOption called with hash:', hash);
+    console.log('Current isBuying state:', isBuying);
+    
+    // Update URL hash
     history.push(`${history.location.pathname}#${hash}`);
-    props.setIsBuying(hash === "redeem" ? false : true);
+    
+    // Update buying state
+    const newIsBuying = hash === "redeem" ? false : true;
+    console.log('Setting isBuying to:', newIsBuying);
+    
+    setIsBuying(newIsBuying);
+    
+    // Clear form values when switching modes
+    setSwapValue("");
+    setAlpValue("");
+    setFeeBasisPoints("");
+  };
+
+  // Enhanced onSwapOptionChange function
+  const onSwapOptionChange = (opt) => {
+    console.log('Tab clicked:', opt);
+    console.log('Current tab label:', tabLabel);
+    
+    // Handle both translated and non-translated strings
+    const isSellOption = opt === t`Sell MLP` || opt === 'Sell MLP' || opt.includes('Sell');
+    
+    if (isSellOption) {
+      console.log('Switching to Sell mode');
+      switchSwapOption("redeem");
+    } else {
+      console.log('Switching to Buy mode');
+      switchSwapOption("");
+    }
   };
 
   const fillMaxAmount = () => {
@@ -694,14 +717,6 @@ export default function AlpSwap(props) {
   const wrappedTokenSymbol = getWrappedToken(chainId).symbol;
   const nativeTokenSymbol = getNativeToken(chainId).symbol;
 
-  const onSwapOptionChange = (opt) => {
-    if (opt === t`Sell ALP`) {
-      switchSwapOption("redeem");
-    } else {
-      switchSwapOption();
-    }
-  };
-
   return (
     <div className="AlpSwap">
       <SwapErrorModal
@@ -716,37 +731,17 @@ export default function AlpSwap(props) {
         infoTokens={infoTokens}
         swapUsdMin={swapUsdMin}
       />
-      {/* <div className="Page-title-section">
-        <div className="Page-title">{isBuying ? "Buy ALP" : "Sell ALP"}</div>
-        {isBuying && <div className="Page-description">
-          Purchase <a href="https://amped.gitbook.io/amped/" target="_blank" rel="noopener noreferrer">ALP tokens</a> to earn {nativeTokenSymbol} fees from swaps and leverage trading.<br/>
-          Note that there is a minimum holding time of 15 minutes after a purchase.<br/>
-          <div>View <Link to="/earn">staking</Link> page.</div>
-        </div>}
-        {!isBuying && <div className="Page-description">
-          Redeem your ALP tokens for any supported asset.
-          {inCooldownWindow && <div>
-            ALP tokens can only be redeemed 15 minutes after your most recent purchase.<br/>
-            Your last purchase was at {formatDateTime(lastPurchaseTime)}, you can redeem ALP tokens after {formatDateTime(redemptionTime)}.<br/>
-          </div>}
-          <div>View <Link to="/earn">staking</Link> page.</div>
-        </div>}
-      </div> */}
+      
       <div className="AlpSwap-content">
         <div className="App-card AlpSwap-stats-card">
           <div className="App-card-title">
             <div className="App-card-title-mark">
               <div className="App-card-title-mark-icon">
                 <img src={plp40Icon} alt="plp40Icon" width="35px" height="35px" />
-                {/* {chainId === BASE ? (
-                  <img src={base16Icon} alt="base16Icon" className="selected-network-symbol" />
-                ) : (
-                  <img src={goerli16Icon} alt="goerli16Icon" className="selected-network-symbol" />
-                )} */}
               </div>
               <div className="App-card-title-mark-info">
-                <div className="App-card-title-mark-title">PLP</div>
-                <div className="App-card-title-mark-subtitle">PLP</div>
+                <div className="App-card-title-mark-title">MLP</div>
+                <div className="App-card-title-mark-subtitle">MLP</div>
               </div>
               <div>
                 <AssetDropdown assetSymbol="ALP" />
@@ -766,7 +761,7 @@ export default function AlpSwap(props) {
                 <Trans>Wallet</Trans>
               </div>
               <div className="value">
-                {formatAmount(alpBalance, ALP_DECIMALS, 4, true)} PLP ($
+                {formatAmount(alpBalance, ALP_DECIMALS, 4, true)} MLP ($
                 {formatAmount(alpBalanceUsd, USD_DECIMALS, 2, true)})
               </div>
             </div>
@@ -775,7 +770,7 @@ export default function AlpSwap(props) {
                 <Trans>Staked</Trans>
               </div>
               <div className="value">
-                {formatAmount(alpBalance, ALP_DECIMALS, 4, true)} PLP ($
+                {formatAmount(alpBalance, ALP_DECIMALS, 4, true)} MLP ($
                 {formatAmount(alpBalanceUsd, USD_DECIMALS, 2, true)})
               </div>
             </div>
@@ -789,7 +784,7 @@ export default function AlpSwap(props) {
                 </div>
                 <div className="value">
                   <Tooltip
-                    handle={`${formatAmount(reservedAmount, 18, 4, true)} PLP ($${formatAmount(
+                    handle={`${formatAmount(reservedAmount, 18, 4, true)} MLP ($${formatAmount(
                       reserveAmountUsd,
                       USD_DECIMALS,
                       2,
@@ -797,7 +792,7 @@ export default function AlpSwap(props) {
                     )})`}
                     position="right-bottom"
                     renderContent={() =>
-                      t`${formatAmount(reservedAmount, 18, 4, true)} PLP have been reserved for vesting.`
+                      t`${formatAmount(reservedAmount, 18, 4, true)} MLP have been reserved for vesting.`
                     }
                   />
                 </div>
@@ -836,20 +831,23 @@ export default function AlpSwap(props) {
               </div>
               <div className="value">
                 <Trans>
-                  {formatAmount(alpSupply, ALP_DECIMALS, 4, true)} PLP ($
+                  {formatAmount(alpSupply, ALP_DECIMALS, 4, true)} MLP ($
                   {formatAmount(alpSupplyUsd, USD_DECIMALS, 2, true)})
                 </Trans>
               </div>
             </div>
           </div>
         </div>
+        
+        {/* Main Trading Box with Enhanced Tab Functionality */}
         <div className="AlpSwap-box App-box">
           <Tab
-            options={[t`Buy PLP`, t`Sell PLP`]}
+            options={[t`Buy MLP`, t`Sell MLP`]}
             option={tabLabel}
             onChange={onSwapOptionChange}
             className="Exchange-swap-option-tabs"
           />
+          
           {isBuying && (
             <BuyInputSection
               topLeftLabel={payLabel}
@@ -891,7 +889,7 @@ export default function AlpSwap(props) {
               defaultTokenName={"ALP"}
             >
               <div className="selected-token">
-                PLP <img src={alp24Icon} alt="alp24Icon" />
+                MLP <img src={alp24Icon} alt="alp24Icon" />
               </div>
             </BuyInputSection>
           )}
@@ -902,9 +900,11 @@ export default function AlpSwap(props) {
                 src={arrowIcon}
                 alt="arrowIcon"
                 onClick={() => {
+                  console.log('Arrow clicked, switching from', isBuying ? 'Buy' : 'Sell', 'to', isBuying ? 'Sell' : 'Buy');
                   setIsBuying(!isBuying);
                   switchSwapOption(isBuying ? "redeem" : "");
                 }}
+                style={{ cursor: 'pointer' }}
               />
             </div>
           </div>
@@ -920,7 +920,7 @@ export default function AlpSwap(props) {
               defaultTokenName={"ALP"}
             >
               <div className="selected-token">
-              PLP <img src={alp24Icon} alt="alp24Icon" />
+                MLP <img src={alp24Icon} alt="alp24Icon" />
               </div>
             </BuyInputSection>
           )}
@@ -1005,6 +1005,8 @@ export default function AlpSwap(props) {
           </div>
         </div>
       </div>
+      
+      {/* Save on Fees Section */}
       <div className="Tab-title-section">
         <div className="Page-title">
           <Trans>Save on Fees</Trans>
@@ -1012,22 +1014,23 @@ export default function AlpSwap(props) {
         {isBuying && (
           <div className="Page-description">
             <Trans>
-              Fees may vary depending on which asset you use to buy PLP. <br />
-              Enter the amount of PLP you want to purchase in the order form, then check here to compare fees.
+              Fees may vary depending on which asset you use to buy MLP. <br />
+              Enter the amount of MLP you want to purchase in the order form, then check here to compare fees.
             </Trans>
           </div>
         )}
         {!isBuying && (
           <div className="Page-description">
             <Trans>
-              Fees may vary depending on which asset you sell PLP for. <br />
-              Enter the amount of PLP you want to redeem in the order form, then check here to compare fees.
+              Fees may vary depending on which asset you sell MLP for. <br />
+              Enter the amount of MLP you want to redeem in the order form, then check here to compare fees.
             </Trans>
           </div>
         )}
       </div>
+      
+      {/* Token List Table */}
       <div className="AlpSwap-token-list">
-        {/* <div className="AlpSwap-token-list-content"> */}
         <table className="token-table">
           <thead>
             <tr>
@@ -1045,7 +1048,7 @@ export default function AlpSwap(props) {
                     position="right-bottom text-none"
                     renderContent={() => (
                       <p className="text-white">
-                        <Trans>Available amount to deposit into PLP.</Trans>
+                        <Trans>Available amount to deposit into MLP.</Trans>
                       </p>
                     )}
                   />
@@ -1058,7 +1061,7 @@ export default function AlpSwap(props) {
                       return (
                         <p className="text-white">
                           <Trans>
-                            Available amount to withdraw from PLP. Funds not utilized by current open positions.
+                            Available amount to withdraw from MLP. Funds not utilized by current open MjolnirX.
                           </Trans>
                         </p>
                       );
@@ -1112,7 +1115,6 @@ export default function AlpSwap(props) {
               }
               const tokenInfo = getTokenInfo(infoTokens, token.address);
             
-              // if (tokenInfo === undefined) return;
               let managedUsd;
               if (tokenInfo && tokenInfo.managedUsd) {
                 managedUsd = tokenInfo.managedUsd;
@@ -1129,7 +1131,6 @@ export default function AlpSwap(props) {
               }
               const tokenImage = importImage("ic_" + token.symbol.toLowerCase() + "_40.svg");
 
-              // if (tokenInfo === undefined) return;
               let isCapReached = tokenInfo.managedAmount?.gt(tokenInfo.maxUsdgAmount);
 
               let amountLeftToDeposit = bigNumberify(0);
@@ -1142,6 +1143,7 @@ export default function AlpSwap(props) {
               if (amountLeftToDeposit.lt(0)) {
                 amountLeftToDeposit = bigNumberify(0);
               }
+              
               function renderFees() {
                 const swapUrl = `https://app.1inch.io/#/${chainId}/swap/`;
                 switch (true) {
@@ -1156,7 +1158,7 @@ export default function AlpSwap(props) {
                               Max pool capacity reached for {tokenInfo.symbol}
                               <br />
                               <br />
-                              Please mint PLP using another token
+                              Please mint MLP using another token
                             </Trans>
                             <br />
                             <p>
@@ -1242,6 +1244,8 @@ export default function AlpSwap(props) {
             })}
           </tbody>
         </table>
+        
+        {/* Mobile Token Grid */}
         <div className="token-grid">
           {visibleTokens.map((token) => {
             let tokenFeeBps;
@@ -1284,7 +1288,6 @@ export default function AlpSwap(props) {
             }
 
             let amountLeftToDeposit = bigNumberify(0);
-            // if (tokenInfo === undefined) return;
             if (tokenInfo.maxUsdgAmount && tokenInfo.maxUsdgAmount.gt(0)) {
               amountLeftToDeposit = tokenInfo.maxUsdgAmount
                 .sub(tokenInfo.usdgAmount)
@@ -1305,7 +1308,7 @@ export default function AlpSwap(props) {
                       position="right-bottom"
                       renderContent={() => (
                         <Trans>
-                          Max pool capacity reached for {tokenInfo.symbol}. Please mint PLP using another token
+                          Max pool capacity reached for {tokenInfo.symbol}. Please mint MLP using another token
                         </Trans>
                       )}
                     />
@@ -1343,7 +1346,7 @@ export default function AlpSwap(props) {
                         position="left-bottom"
                         renderContent={() => (
                           <p className="text-white">
-                            <Trans>Available amount to deposit into PLP.</Trans>
+                            <Trans>Available amount to deposit into MLP.</Trans>
                           </p>
                         )}
                       />
@@ -1367,7 +1370,7 @@ export default function AlpSwap(props) {
                             return (
                               <p className="text-white">
                                 <Trans>
-                                  Available amount to withdraw from PLP. Funds not utilized by current open positions.
+                                  Available amount to withdraw from MLP. Funds not utilized by current open positions.
                                 </Trans>
                               </p>
                             );

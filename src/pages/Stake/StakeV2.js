@@ -452,7 +452,7 @@ function VesterDepositModal(props) {
                   onChange={(e) => setValue(e.target.value)}
                 />
               </div>
-              <div className="PositionEditor-token-symbol">esPOE</div>
+              <div className="PositionEditor-token-symbol">esMJX</div>
             </div>
           </div>
           <div className="VesterDepositModal-info-rows">
@@ -460,7 +460,7 @@ function VesterDepositModal(props) {
               <div className="Exchange-info-label">
                 <Trans>Wallet</Trans>
               </div>
-              <div className="align-right">{formatAmount(balance, 18, 2, true)} esPOE</div>
+              <div className="align-right">{formatAmount(balance, 18, 2, true)} esMJX</div>
             </div>
             <div className="Exchange-info-row">
               <div className="Exchange-info-label">
@@ -484,12 +484,12 @@ function VesterDepositModal(props) {
                         <StatsTooltipRow
                           showDollar={false}
                           label={t`Deposited`}
-                          value={`${formatAmount(vestedAmount, 18, 2, true)} esPOE`}
+                          value={`${formatAmount(vestedAmount, 18, 2, true)} esMJX`}
                         />
                         <StatsTooltipRow
                           showDollar={false}
                           label={t`Max Capacity`}
-                          value={`${formatAmount(maxVestableAmount, 18, 2, true)} esPOE`}
+                          value={`${formatAmount(maxVestableAmount, 18, 2, true)} esMJX`}
                         />
                       </div>
                     );
@@ -752,22 +752,22 @@ function CompoundModal(props) {
           </div>
           <div>
             <Checkbox isChecked={shouldClaimAmp} setIsChecked={setShouldClaimAmp} disabled={shouldStakeAmp}>
-              <Trans>Claim POE Rewards</Trans>
+              <Trans>Claim MJX Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldStakeAmp} setIsChecked={toggleShouldStakeAmp}>
-              <Trans>Stake POE Rewards</Trans>
+              <Trans>Stake MJX Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldClaimEsAmp} setIsChecked={setShouldClaimEsAmp} disabled={shouldStakeEsAmp}>
-              <Trans>Claim esPOE Rewards</Trans>
+              <Trans>Claim esMJX Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldStakeEsAmp} setIsChecked={toggleShouldStakeEsAmp}>
-              <Trans>Stake esPOE Rewards</Trans>
+              <Trans>Stake esMJX Rewards</Trans>
             </Checkbox>
           </div>
           <div>
@@ -878,12 +878,12 @@ function ClaimModal(props) {
         <div className="CompoundModal-menu">
           <div>
             <Checkbox isChecked={shouldClaimAmp} setIsChecked={setShouldClaimAmp}>
-              <Trans>Claim POE Rewards</Trans>
+              <Trans>Claim MJX Rewards</Trans>
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldClaimEsAmp} setIsChecked={setShouldClaimEsAmp}>
-              <Trans>Claim esPOE Rewards</Trans>
+              <Trans>Claim esMJX Rewards</Trans>
             </Checkbox>
           </div>
           <div>
@@ -1183,15 +1183,15 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
 
   const showStakeAmpModal = () => {
     if (!isAmpTransferEnabled) {
-      helperToast.error(t`POE transfers not yet enabled`);
+      helperToast.error(t`MJX transfers not yet enabled`);
       return;
     }
 
     setIsStakeModalVisible(true);
-    setStakeModalTitle(t`Stake POE`);
+    setStakeModalTitle(t`Stake MJX`);
     setStakeModalMaxAmount(processedData.ampBalance);
     setStakeValue("");
-    setStakingTokenSymbol("POE");
+    setStakingTokenSymbol("MJX");
     setStakingTokenAddress(ampAddress);
     setStakingFarmAddress(stakedAmpTrackerAddress);
     setStakeMethodName("stakeGmx");
@@ -1199,13 +1199,13 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
 
   const showStakeEsAmpModal = () => {
     setIsStakeModalVisible(true);
-    setStakeModalTitle(t`Stake esPOE`);
+    setStakeModalTitle(t`Stake esMJX`);
     setStakeModalMaxAmount(processedData.esAmpBalance);
     setStakeValue("");
-    setStakingTokenSymbol("esPOE");
+    setStakingTokenSymbol("esMJX");
     setStakingTokenAddress(esAmpAddress);
     setStakingFarmAddress(AddressZero);
-    setStakeMethodName("stakeEsPOE");
+    setStakeMethodName("stakeEsMJX");
   };
 
   const showAmpVesterDepositModal = () => {
@@ -1215,8 +1215,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterDepositModalVisible(true);
-    setVesterDepositTitle(t`POE Vault`);
-    setVesterDepositStakeTokenLabel("staked POE + esPOE + Multiplier Points");
+    setVesterDepositTitle(t`MJX Vault`);
+    setVesterDepositStakeTokenLabel("staked MJX + esMJX + Multiplier Points");
     setVesterDepositMaxAmount(remainingVestableAmount);
     setVesterDepositBalance(processedData.esAmpBalance);
     setVesterDepositEscrowedBalance(vestingData.ampVester.escrowedBalance);
@@ -1236,8 +1236,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterDepositModalVisible(true);
-    setVesterDepositTitle(t`PLP Vault`);
-    setVesterDepositStakeTokenLabel("staked PLP");
+    setVesterDepositTitle(t`MLP Vault`);
+    setVesterDepositStakeTokenLabel("staked MLP");
     setVesterDepositMaxAmount(remainingVestableAmount);
     setVesterDepositBalance(processedData.esAmpBalance);
     setVesterDepositEscrowedBalance(vestingData.alpVester.escrowedBalance);
@@ -1257,7 +1257,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterWithdrawModalVisible(true);
-    setVesterWithdrawTitle(t`Withdraw from POE Vault`);
+    setVesterWithdrawTitle(t`Withdraw from MJX Vault`);
     setVesterWithdrawAddress(ampVesterAddress);
   };
 
@@ -1268,17 +1268,17 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterWithdrawModalVisible(true);
-    setVesterWithdrawTitle(t`Withdraw from PLP Vault`);
+    setVesterWithdrawTitle(t`Withdraw from MLP Vault`);
     setVesterWithdrawAddress(alpVesterAddress);
   };
 
   const showUnstakeAmpModal = () => {
     if (!isAmpTransferEnabled) {
-      helperToast.error(t`POE transfers not yet enabled`);
+      helperToast.error(t`MJX transfers not yet enabled`);
       return;
     }
     setIsUnstakeModalVisible(true);
-    setUnstakeModalTitle(t`Unstake POE`);
+    setUnstakeModalTitle(t`Unstake MJX`);
     let maxAmount = processedData.ampInStakedAmp;
     if (
       processedData.ampInStakedAmp &&
@@ -1292,13 +1292,13 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     setUnstakeModalMaxAmount(maxAmount);
     setUnstakeModalReservedAmount(vestingData.ampVesterPairAmount);
     setUnstakeValue("");
-    setUnstakingTokenSymbol("POE");
+    setUnstakingTokenSymbol("MJX");
     setUnstakeMethodName("unstakeGmx");
   };
 
   const showUnstakeEsAmpModal = () => {
     setIsUnstakeModalVisible(true);
-    setUnstakeModalTitle(t`Unstake esPOE`);
+    setUnstakeModalTitle(t`Unstake esMJX`);
     let maxAmount = processedData.esAmpInStakedAmp;
     if (
       processedData.esAmpInStakedAmp &&
@@ -1312,8 +1312,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     setUnstakeModalMaxAmount(maxAmount);
     setUnstakeModalReservedAmount(vestingData.ampVesterPairAmount);
     setUnstakeValue("");
-    setUnstakingTokenSymbol("esPOE");
-    setUnstakeMethodName("unstakeEsPoe");
+    setUnstakingTokenSymbol("esMJX");
+    setUnstakeMethodName("unstakeEsMjx");
   };
 
   const renderMultiplierPointsLabel = useCallback(() => {
@@ -1344,11 +1344,11 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
   if (totalRewardTokensAndAlp && totalRewardTokensAndAlp.gt(0)) {
     let ampAmountStr;
     if (processedData.ampInStakedAmp && processedData.ampInStakedAmp.gt(0)) {
-      ampAmountStr = formatAmount(processedData.ampInStakedAmp, 18, 2, true) + " POE";
+      ampAmountStr = formatAmount(processedData.ampInStakedAmp, 18, 2, true) + " MJX";
     }
     let esAmpAmountStr;
     if (processedData.esAmpInStakedAmp && processedData.esAmpInStakedAmp.gt(0)) {
-      esAmpAmountStr = formatAmount(processedData.esAmpInStakedAmp, 18, 2, true) + " esPOE";
+      esAmpAmountStr = formatAmount(processedData.esAmpInStakedAmp, 18, 2, true) + " esMJX";
     }
     let mpAmountStr;
     if (processedData.bonusAmpInFeeAmp && processedData.bnAmpInFeeAmp.gt(0)) {
@@ -1356,7 +1356,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
     let alpStr;
     if (processedData.alpBalance && processedData.alpBalance.gt(0)) {
-      alpStr = formatAmount(processedData.alpBalance, 18, 2, true) + " PLP";
+      alpStr = formatAmount(processedData.alpBalance, 18, 2, true) + " MLP";
     }
     const amountStr = [ampAmountStr, esAmpAmountStr, mpAmountStr, alpStr].filter((s) => s).join(", ");
     earnMsg = (
@@ -1473,7 +1473,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           </div>
           <div className="Page-description">
             <Trans>
-              Stake POE and PLP to earn rewards.
+              Stake MJX and MLP to earn rewards.
             </Trans>
           </div>
           {earnMsg && <div className="Page-description">{earnMsg}</div>}
@@ -1482,7 +1482,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
       <div className="StakeV2-content">
         <div className="StakeV2-cards">
           <div className="App-card StakeV2-amp-card">
-            <div className="App-card-title font-kufam">POE</div>
+            <div className="App-card-title font-kufam">MJX</div>
             <div className="App-card-divider"></div>
             <div className="App-card-content">
               <div className="App-card-row">
@@ -1519,7 +1519,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Wallet</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "ampBalance", 18, 2, true)} POE ($
+                  {formatKeyAmount(processedData, "ampBalance", 18, 2, true)} MJX ($
                   {formatKeyAmount(processedData, "ampBalanceUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
@@ -1528,7 +1528,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "ampInStakedAmp", 18, 2, true)} POE ($
+                  {formatKeyAmount(processedData, "ampInStakedAmp", 18, 2, true)} MJX ($
                   {formatKeyAmount(processedData, "ampInStakedAmpUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
@@ -1545,9 +1545,9 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                       return (
                         <>
                           <StatsTooltipRow
-                            label="Escrowed POE APR"
+                            label="Escrowed MJX APR"
                             showDollar={false}
-                            value={`${formatKeyAmount(processedData, "poeAprForEsPoe", 2, 2, true)}%`}
+                            value={`${formatKeyAmount(processedData, "mjxAprForEsMjx", 2, 2, true)}%`}
                           />
                           {(!processedData.ampBoostAprForNativeToken ||
                             processedData.ampBoostAprForNativeToken.eq(0)) && (
@@ -1623,7 +1623,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                             showDollar={false}
                           />
                           <StatsTooltipRow
-                            label="Escrowed POE"
+                            label="Escrowed MJX"
                             value={`${formatKeyAmount(
                               processedData,
                               "stakedAmpTrackerRewards",
@@ -1715,7 +1715,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 {!totalAmpSupply && "..."}
                 {totalAmpSupply && (
                   <div>
-                    {formatAmount(totalAmpSupply, 18, 0, true)} POE ($
+                    {formatAmount(totalAmpSupply, 18, 0, true)} MJX ($
                     {formatAmount(totalSupplyUsd, USD_DECIMALS, 2/* 0 */, true)})
                   </div>
                 )}
@@ -1726,7 +1726,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Buy AMP</Trans>
                 </Link> */}
                 <ExternalLink href="https://app.elektrik.network/#/swap" className="App-card-option button-primary disabled">
-                  <Trans>Buy POE</Trans>
+                  <Trans>Buy MJX</Trans>
                 </ExternalLink>
                 {active && (
                   <button className="App-card-option button-primary" onClick={() => showStakeAmpModal()}>
@@ -1762,7 +1762,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 </div>
               </div>
               <div className="App-card-row">
-                <div className="label">POE</div>
+                <div className="label">MJX</div>
                 <div>
                   {formatKeyAmount(processedData, "totalVesterRewards", 18, 4, true)} ($
                   {formatKeyAmount(processedData, "totalVesterRewardsUsd", USD_DECIMALS, 2, true)})
@@ -1770,11 +1770,11 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
               </div>
               <div className="App-card-row">
                 <div className="label">
-                  <Trans>Escrowed POE</Trans>
+                  <Trans>Escrowed MJX</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "totalEsPoeRewards", 18, 4, true)} ($
-                  {formatKeyAmount(processedData, "totalEsPoeRewardsUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "totalEsMjxRewards", 18, 4, true)} ($
+                  {formatKeyAmount(processedData, "totalEsMjxRewardsUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-row">
@@ -1841,22 +1841,22 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
             </div>
           </div>
           <div className="App-card">
-            <div className="App-card-title font-kufam">PLP ({chainName})</div>
+            <div className="App-card-title font-kufam">MLP ({chainName})</div>
             <div className="App-card-divider"></div>
             <div className="App-card-content">
               <div className="App-card-row">
                 <div className="label">
                   <Trans>Price</Trans>
                 </div>
-                <div>${formatKeyAmount(processedData, "plpPrice", USD_DECIMALS, 3, true)}</div>
+                <div>${formatKeyAmount(processedData, "MlpPrice", USD_DECIMALS, 3, true)}</div>
               </div>
               <div className="App-card-row">
                 <div className="label">
                   <Trans>Wallet</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "plpBalance", ALP_DECIMALS, 2, true)} PLP ($
-                  {formatKeyAmount(processedData, "plpBalanceUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "mlpBalance", ALP_DECIMALS, 2, true)} MLP ($
+                  {formatKeyAmount(processedData, "mlpBalanceUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-row">
@@ -1864,8 +1864,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "plpBalance", ALP_DECIMALS, 2, true)} PLP ($
-                  {formatKeyAmount(processedData, "plpBalanceUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "mlpBalance", ALP_DECIMALS, 2, true)} MLP ($
+                  {formatKeyAmount(processedData, "mlpBalanceUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-divider"></div>
@@ -1875,19 +1875,19 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 </div>
                 <div>
                   <Tooltip
-                    handle={`${formatKeyAmount(processedData, "plpAprTotal", 2, 2, true)}%`}
+                    handle={`${formatKeyAmount(processedData, "mlpAprTotal", 2, 2, true)}%`}
                     position="right-bottom"
                     renderContent={() => {
                       return (
                         <>
                           <StatsTooltipRow
                             label={`${nativeTokenSymbol} (${wrappedTokenSymbol}) APR`}
-                            value={`${formatKeyAmount(processedData, "plpAprForNativeToken", 2, 2, true)}%`}
+                            value={`${formatKeyAmount(processedData, "mlpAprForNativeToken", 2, 2, true)}%`}
                             showDollar={false}
                           />
                           <StatsTooltipRow
-                            label="Escrowed POE APR"
-                            value={`${formatKeyAmount(processedData, "plpAprForEsPoe", 2, 2, true)}%`}
+                            label="Escrowed MJX APR"
+                            value={`${formatKeyAmount(processedData, "mlpAprForEsMjx", 2, 2, true)}%`}
                             showDollar={false}
                           />
                           <br />
@@ -1907,7 +1907,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                 </div>
                 <div>
                   <Tooltip
-                    handle={`$${formatKeyAmount(processedData, "totalplpRewardsUsd", USD_DECIMALS, 2, true)}`}
+                    handle={`$${formatKeyAmount(processedData, "totalmlpRewardsUsd", USD_DECIMALS, 2, true)}`}
                     position="right-bottom"
                     renderContent={() => {
                       return (
@@ -1919,19 +1919,19 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                               "feeAlpTrackerRewards",
                               18,
                               4
-                            )} ($${formatKeyAmount(processedData, "feeplpTrackerRewardsUsd", USD_DECIMALS, 2, true)})`}
+                            )} ($${formatKeyAmount(processedData, "feemlpTrackerRewardsUsd", USD_DECIMALS, 2, true)})`}
                             showDollar={false}
                           />
                           <StatsTooltipRow
-                            label="Escrowed POE"
+                            label="Escrowed MJX"
                             value={`${formatKeyAmount(
                               processedData,
-                              "stakedplpTrackerRewards",
+                              "stakedmlpTrackerRewards",
                               18,
                               4
                             )} ($${formatKeyAmount(
                               processedData,
-                              "stakedplpTrackerRewardsUsd",
+                              "stakedmlpTrackerRewardsUsd",
                               USD_DECIMALS,
                               2,
                               true
@@ -1950,8 +1950,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Total Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "plpSupply", 18, 2, true)} PLP ($
-                  {formatKeyAmount(processedData, "plpSupplyUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "mlpSupply", 18, 2, true)} MLP ($
+                  {formatKeyAmount(processedData, "mlpSupplyUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-row">
@@ -1959,17 +1959,17 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Total Supply</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "plpSupply", 18, 2, true)} PLP ($
-                  {formatKeyAmount(processedData, "plpSupplyUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "mlpSupply", 18, 2, true)} MLP ($
+                  {formatKeyAmount(processedData, "mlpSupplyUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-divider"></div>
               <div className="App-card-options">
                 <Link className="App-card-option button-primary" to="/buy_alp">
-                  <Trans>Buy PLP</Trans>
+                  <Trans>Buy MLP</Trans>
                 </Link>
                 <Link className="App-card-option button-primary" to="/buy_alp#redeem">
-                  <Trans>Sell PLP</Trans>
+                  <Trans>Sell MLP</Trans>
                 </Link>
                 {/* {hasInsurance && (
                   <a
@@ -1986,7 +1986,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           </div>
           <div className="App-card">
             <div className="App-card-title font-kufam">
-              <Trans>Escrowed POE</Trans>
+              <Trans>Escrowed MJX</Trans>
             </div>
             <div className="App-card-divider"></div>
             <div className="App-card-content">
@@ -2001,8 +2001,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Wallet</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "esPoeBalance", 18, 2, true)} esPOE ($
-                  {formatKeyAmount(processedData, "esPoeBalanceUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "esMjxBalance", 18, 2, true)} esMJX ($
+                  {formatKeyAmount(processedData, "esMjxBalanceUsd", USD_DECIMALS, 2, true)})
                 </div> 
               </div>
               <div className="App-card-row">
@@ -2010,8 +2010,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "esPoeInStakedAmp", 18, 2, true)} esPOE ($
-                  {formatKeyAmount(processedData, "esPoeInStakedAmpUsd", USD_DECIMALS, 2, true)})
+                  {formatKeyAmount(processedData, "esMjxInStakedAmp", 18, 2, true)} esMJX ($
+                  {formatKeyAmount(processedData, "esMjxInStakedAmpUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-divider"></div>
@@ -2040,8 +2040,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                               />
                             )}
                             <StatsTooltipRow
-                              label="Escrowed POE APR"
-                              value={`${formatKeyAmount(processedData, "poeAprForEsPoe", 2, 2, true)}%`}
+                              label="Escrowed MJX APR"
+                              value={`${formatKeyAmount(processedData, "mjxAprForEsMjx", 2, 2, true)}%`}
                               showDollar={false}
                             />
                           </>
@@ -2061,8 +2061,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Total Staked</Trans>
                 </div>
                 <div>
-                  {formatKeyAmount(processedData, "stakedEsPoeSupply", 18, 0, true)} esPOE ($
-                  {formatKeyAmount(processedData, "stakedEsPoeSupplyUsd", USD_DECIMALS, 0, true)})
+                  {formatKeyAmount(processedData, "stakedEsMjxSupply", 18, 0, true)} esMJX ($
+                  {formatKeyAmount(processedData, "stakedEsMjxSupplyUsd", USD_DECIMALS, 0, true)})
                 </div>
               </div>
               <div className="App-card-row">
@@ -2070,7 +2070,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <Trans>Total Supply</Trans>
                 </div>
                 <div>
-                  {formatAmount(esAmpSupply, 18, 0, true)} esPOE (${formatAmount(esAmpSupplyUsd, USD_DECIMALS, 0, true)}
+                  {formatAmount(esAmpSupply, 18, 0, true)} esMJX (${formatAmount(esAmpSupplyUsd, USD_DECIMALS, 0, true)}
                   )
                 </div>
               </div>
@@ -2104,7 +2104,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           </div>
           <div className="Page-description">
             <Trans>
-              Convert esPOE tokens to POE tokens.
+              Convert esMJX tokens to MJX tokens.
               <br />
               Please read the{" "}
               <a href="#" target="_blank" rel="noopener noreferrer">
@@ -2118,7 +2118,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           <div className="StakeV2-cards">
             <div className="App-card StakeV2-amp-card">
               <div className="App-card-title font-kufam">
-                <Trans>POE Vault</Trans>
+                <Trans>MJX Vault</Trans>
               </div>
               <div className="App-card-divider"></div>
               <div className="App-card-content">
@@ -2135,13 +2135,13 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                           <>
                             <StatsTooltipRow
                               showDollar={false}
-                              label="POE"
+                              label="MJX"
                               value={formatAmount(processedData.ampInStakedAmp, 18, 2, true)}
                             />
 
                             <StatsTooltipRow
                               showDollar={false}
-                              label="esPOE"
+                              label="esMJX"
                               value={formatAmount(processedData.esAmpInStakedAmp, 18, 2, true)}
                             />
                             <StatsTooltipRow
@@ -2183,8 +2183,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                           <div>
                             <Trans>
                               {formatKeyAmount(vestingData, "ampVesterClaimSum", 18, 4, true)} tokens have been
-                              converted to POE from the{" "}
-                              {formatKeyAmount(vestingData, "ampVesterVestedAmount", 18, 4, true)} esPOE deposited for
+                              converted to MJX from the{" "}
+                              {formatKeyAmount(vestingData, "ampVesterVestedAmount", 18, 4, true)} esMJX deposited for
                               vesting.
                             </Trans>
                           </div>
@@ -2199,11 +2199,11 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   </div>
                   <div>
                     <Tooltip
-                      handle={`${formatKeyAmount(vestingData, "ampVesterClaimable", 18, 4, true)} POE`}
+                      handle={`${formatKeyAmount(vestingData, "ampVesterClaimable", 18, 4, true)} MJX`}
                       position="right-bottom"
                       renderContent={() => (
                         <Trans>
-                          {formatKeyAmount(vestingData, "ampVesterClaimable", 18, 4, true)} POE tokens can be claimed,
+                          {formatKeyAmount(vestingData, "ampVesterClaimable", 18, 4, true)} MJX tokens can be claimed,
                           use the options under the Total Rewards section to claim them.
                         </Trans>
                       )}
@@ -2232,7 +2232,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
             </div>
             <div className="App-card StakeV2-amp-card">
               <div className="App-card-title font-kufam">
-                <Trans>PLP Vault</Trans>
+                <Trans>MLP Vault</Trans>
               </div>
               <div className="App-card-divider"></div>
               <div className="App-card-content">
@@ -2240,7 +2240,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   <div className="label">
                     <Trans>Staked Tokens</Trans>
                   </div>
-                  <div>{formatAmount(processedData.alpBalance, 18, 2, true)} PLP</div>
+                  <div>{formatAmount(processedData.alpBalance, 18, 2, true)} MLP</div>
                 </div>
                 <div className="App-card-row">
                   <div className="label">
@@ -2257,9 +2257,9 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   </div>
                   <div>
                     <Tooltip
-                      handle={`${formatKeyAmount(vestingData, "plpVesterClaimSum", 18, 4, true)} / ${formatKeyAmount(
+                      handle={`${formatKeyAmount(vestingData, "mlpVesterClaimSum", 18, 4, true)} / ${formatKeyAmount(
                         vestingData,
-                        "plpVesterVestedAmount",
+                        "mlpVesterVestedAmount",
                         18,
                         4,
                         true
@@ -2269,9 +2269,9 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                         return (
                           <div>
                             <Trans>
-                              {formatKeyAmount(vestingData, "plpVesterClaimSum", 18, 4, true)} tokens have been
-                              converted to POE from the{" "}
-                              {formatKeyAmount(vestingData, "plpVesterVestedAmount", 18, 4, true)} esPOE deposited for
+                              {formatKeyAmount(vestingData, "mlpVesterClaimSum", 18, 4, true)} tokens have been
+                              converted to MJX from the{" "}
+                              {formatKeyAmount(vestingData, "mlpVesterVestedAmount", 18, 4, true)} esMJX deposited for
                               vesting.
                             </Trans>
                           </div>
@@ -2286,11 +2286,11 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                   </div>
                   <div>
                     <Tooltip
-                      handle={`${formatKeyAmount(vestingData, "plpVesterClaimable", 18, 4, true)} POE`}
+                      handle={`${formatKeyAmount(vestingData, "mlpVesterClaimable", 18, 4, true)} MJX`}
                       position="right-bottom"
                       renderContent={() => (
                         <Trans>
-                          {formatKeyAmount(vestingData, "plpVesterClaimable", 18, 4, true)} POE tokens can be claimed,
+                          {formatKeyAmount(vestingData, "mlpVesterClaimable", 18, 4, true)} MJX tokens can be claimed,
                           use the options under the Total Rewards section to claim them.
                         </Trans>
                       )}

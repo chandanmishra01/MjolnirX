@@ -17,25 +17,25 @@ export default function TermsAndConditions() {
           <div className="content">
             <div className="section">
               <p className="body-text">
-                Welcome to amped.finance ("we," "us," or "our"), the informational resource for AMP Protocol, as defined below.
+                Welcome to MjolnirX ("we," "us," or "our"), the informational resource for AMP Protocol, as defined below.
               </p>
               <p className="body-text">
-                amped.finance provides information and resources about the fundamentals of the decentralized non-custodial
-                protocol called the AMP Protocol (the "AMP Protocol," "Protocol," or "AMP DApp"). amped.finance is not an
+                MjolnirX provides information and resources about the fundamentals of the decentralized non-custodial
+                protocol called the AMP Protocol (the "AMP Protocol," "Protocol," or "AMP DApp"). MjolnirX is not an
                 available access point to the AMP Protocol.
               </p>
               <p className="body-text">
                 These Terms and Conditions and any other documents incorporated herein by reference (collectively, these
                 "Terms") to you or the company or other legal entity you represent ("you" or "your") explains the terms
-                and conditions by which you may access amped.finance ("the Site") and amped.finance ("the Interface"). Please do
+                and conditions by which you may access MjolnirX ("the Site") and MjolnirX ("the Interface"). Please do
                 not use the Site or Interface if you disagree with any of these Terms.
               </p>
             </div>
             <div className="section">
               <h3 className="body-title">1. USE OF THE SITE AND THE INTERFACE</h3>
-              <p className="body-text">The amped.finance site is for informational purposes only.</p>
+              <p className="body-text">The MjolnirX site is for informational purposes only.</p>
               <p className="body-text">
-                amped.finance is not part of any transaction on the blockchain networks underlying the AMP Protocol; we do not
+                MjolnirX is not part of any transaction on the blockchain networks underlying the AMP Protocol; we do not
                 have possession, custody, or control over any crypto assets appearing on the Interface; and we do not
                 have possession, custody, or control over any user's funds. Further, we do not store, send, or receive
                 any crypto assets. You understand that when you interact with any AMP Protocol smart contracts, you
@@ -44,7 +44,7 @@ export default function TermsAndConditions() {
               <ul className="list-style-none">
                 <li>
                   <p className="body-text">
-                    1.1. As a condition to accessing or using the Site or Interface, you represent and warrant to amped.finance
+                    1.1. As a condition to accessing or using the Site or Interface, you represent and warrant to MjolnirX
                     the following:
                   </p>
                   <ul className="list-style-none">
@@ -102,7 +102,7 @@ export default function TermsAndConditions() {
                         transaction, activity, event or other matter, including any rule, letter, order, judgment,
                         directive or other requirements, guidance, or guideline issued by any domestic or foreign
                         federal, provincial or state, municipal, local or other governmental, regulatory, judicial or
-                        administrative authority having jurisdiction over amped.finance or you as otherwise duly enacted,
+                        administrative authority having jurisdiction over MjolnirX or you as otherwise duly enacted,
                         enforceable by law, the common law or equity (collectively, "Applicable Laws"); or (b)
                         contribute to or facilitate any illegal activity.
                       </p>
@@ -121,8 +121,8 @@ export default function TermsAndConditions() {
                       <p className="body-text">
                         1.2.1. From time to time, the Site or the Interface may be inaccessible or inoperable for any
                         reason, including, but not limited to: (a) equipment malfunctions; (b) periodic maintenance
-                        procedures or repairs that amped.finance or any of its suppliers or contractors may undertake from time
-                        to time; (c) causes beyond amped.finance's control or that amped.finance could not reasonably foresee; (d)
+                        procedures or repairs that MjolnirX or any of its suppliers or contractors may undertake from time
+                        to time; (c) causes beyond MjolnirX's control or that MjolnirX could not reasonably foresee; (d)
                         disruptions and temporary or permanent unavailability of underlying blockchain infrastructure;
                         or (e) unavailability of third-party service providers or external partners for any reason;
                       </p>
@@ -146,11 +146,11 @@ export default function TermsAndConditions() {
                       <p className="body-text">
                         1.2.4. The pricing information provided on the Site or the Interface does not represent an
                         offer, a solicitation of an offer, or any advice regarding, or recommendation to enter into, a
-                        transaction with amped.finance;
+                        transaction with MjolnirX;
                       </p>
                     </li>
                     <li>
-                      <p className="body-text">1.2.5. amped.finance does not act as a broker or advisor for you;</p>
+                      <p className="body-text">1.2.5. MjolnirX does not act as a broker or advisor for you;</p>
                     </li>
                     <li>
                       <p className="body-text">
@@ -190,7 +190,7 @@ export default function TermsAndConditions() {
               <p className="body-text">
                 You are required to pay all fees for transactions involving certain blockchain networks. These fees may
                 include gas costs and all other fees reflected on the Interface at your use, including trading-related
-                fees. amped.finance does not receive fees for any blockchain transactions or using the Site or the Interface.
+                fees. MjolnirX does not receive fees for any blockchain transactions or using the Site or the Interface.
               </p>
             </div>
             <div className="section">
@@ -210,18 +210,18 @@ export default function TermsAndConditions() {
               <ul className="list-style-none">
                 <li>
                   <p className="body-text">
-                    4.1. amped.finance own all rights, names, logos, and other marks used on the Site and the Interface,
+                    4.1. MjolnirX own all rights, names, logos, and other marks used on the Site and the Interface,
                     including, without limitation, any copyrights in and to any content, code, data, or other materials
                     that you may access or use on or through the Site or the Interface; however, the code for the AMP
-                    Protocol and the Interface (amped.finance) deployed on IPFS is open-sourced. Except as expressly set
+                    Protocol and the Interface (MjolnirX) deployed on IPFS is open-sourced. Except as expressly set
                     forth herein, your use of or access to the Site or the Interface does not grant you any ownership or
                     other rights therein.
                   </p>
                 </li>
                 <li>
                   <p className="body-text">
-                    4.2. amped.finance may use and share your comments, bug reports, ideas, or other feedback that you may
-                    provide, including suggestions about how we might improve. You agree that amped.finance is free to use or
+                    4.2. MjolnirX may use and share your comments, bug reports, ideas, or other feedback that you may
+                    provide, including suggestions about how we might improve. You agree that MjolnirX is free to use or
                     not use any feedback we receive from you as we see fit, including copying and sharing such feedback
                     with third parties, without any obligation to you.
                   </p>
@@ -233,19 +233,19 @@ export default function TermsAndConditions() {
               <ul className="list-style-none">
                 <li>
                   <p className="body-text">
-                    5.1. amped.finance reserve the right, at our sole discretion, from time to time and with or without prior
+                    5.1. MjolnirX reserve the right, at our sole discretion, from time to time and with or without prior
                     notice to you, to modify, suspend or disable (temporarily or permanently) the Site or our subdomain
                     to the Interface, in whole or in part, for any reason whatsoever, including, without limitation.
                     Upon termination of your access, your right to use the Site or the Interface from our subdomain will
                     immediately cease. However, it would still be accessible via a third party since we do not host or
-                    own its code. amped.finance will not be liable for any losses suffered by you resulting from any
+                    own its code. MjolnirX will not be liable for any losses suffered by you resulting from any
                     modification to the Site or the Interface or from any modification, suspension, or termination, for
                     any reason, of your access to all or any portion of the Site or the Interface.
                   </p>
                 </li>
                 <li>
                   <p className="body-text">
-                    5.2. amped.finance may revise these Terms from time to time. We will notify you by updating the date at the
+                    5.2. MjolnirX may revise these Terms from time to time. We will notify you by updating the date at the
                     top of the Terms and maintaining a current version. The most current version of the Terms will
                     always be at https://amped.finance/#/terms-and-conditions. All modifications will be effective when they
                     are posted. By continuing to access or use the Site or the Interface after those revisions become
@@ -260,7 +260,7 @@ export default function TermsAndConditions() {
                 <li>
                   <p className="body-text">
                     6.1. The use of technology related to blockchain, smart contracts, and cryptocurrencies, among
-                    others, entails a risk that by accessing transactions, you are assuming. amped.finance does not own or
+                    others, entails a risk that by accessing transactions, you are assuming. MjolnirX does not own or
                     control any underlying software through which blockchain networks are formed. The software
                     underlying blockchain networks are open-source so anyone can use, copy, modify, and distribute it.
                     By using the Interface, you acknowledge and agree:
@@ -268,7 +268,7 @@ export default function TermsAndConditions() {
                   <ul className="list-style-none">
                     <li>
                       <p className="body-text">
-                        6.1.1. That amped.finance is not responsible for the operation of the open-source software and networks
+                        6.1.1. That MjolnirX is not responsible for the operation of the open-source software and networks
                         underlying the Interface;
                       </p>
                     </li>
@@ -284,7 +284,7 @@ export default function TermsAndConditions() {
                         those commonly referred to as "forks," which may materially affect the Interface. You are
                         responsible for securing your private key(s). We do not have access to your private key(s);
                         losing control of your private key(s) will permanently and irreversibly deny you access to any
-                        blockchain-based network. Neither amped.finance nor any other person or entity will be able to retrieve
+                        blockchain-based network. Neither MjolnirX nor any other person or entity will be able to retrieve
                         or protect your digital assets. If your private key(s) are lost, you will not be able to
                         transfer your digital assets to any blockchain address or wallet. If this occurs, you will not
                         be able to realize any value or utility from the digital assets you may hold.
@@ -294,13 +294,13 @@ export default function TermsAndConditions() {
                 </li>
                 <li>
                   <p className="body-text">
-                    6.2. amped.finance is not responsible for the content of any third party, including, but not limited to,
-                    information, materials, products, or services that amped.finance does not own or control. In addition,
-                    third parties may offer promotions related to your access and use of the Interface. amped.finance does not
+                    6.2. MjolnirX is not responsible for the content of any third party, including, but not limited to,
+                    information, materials, products, or services that MjolnirX does not own or control. In addition,
+                    third parties may offer promotions related to your access and use of the Interface. MjolnirX does not
                     endorse or assume any responsibility for such resources or promotions. Suppose you access any such
                     resources or participate in any such promotions. In that case, you do so at your own risk and
                     understand that these Terms do not apply to your dealings or relationships with any third parties.
-                    You expressly relieve amped.finance of all liability arising from using such resources or participating in
+                    You expressly relieve MjolnirX of all liability arising from using such resources or participating in
                     such promotions.
                   </p>
                 </li>
@@ -329,9 +329,9 @@ export default function TermsAndConditions() {
                 </li>
                 <li>
                   <p className="body-text">
-                    6.6. You hereby assume and agree that amped.finance will have no responsibility or liability for the risks
+                    6.6. You hereby assume and agree that MjolnirX will have no responsibility or liability for the risks
                     in Section 9. You hereby irrevocably waive, release and discharge all claims, whether known or
-                    unknown to you, against amped.finance, its affiliates, and their respective shareholders, members,
+                    unknown to you, against MjolnirX, its affiliates, and their respective shareholders, members,
                     directors, officers, employees, agents, representatives, suppliers, and contractors related to any
                     of the risks set forth in this Section 6.
                   </p>
@@ -358,7 +358,7 @@ export default function TermsAndConditions() {
                     <li>
                       <p className="body-text">
                         7.1.2. Engage in transactions involving items that infringe or violate any copyright, trademark,
-                        right of publicity, privacy, or any other proprietary right of amped.finance;
+                        right of publicity, privacy, or any other proprietary right of MjolnirX;
                       </p>
                     </li>
                     <li>
@@ -389,7 +389,7 @@ export default function TermsAndConditions() {
                     </li>
                     <li>
                       <p className="body-text">
-                        7.1.6. Harass, abuse, or harm another person or entity, including amped.finance's collaborator and
+                        7.1.6. Harass, abuse, or harm another person or entity, including MjolnirX's collaborator and
                         service providers;
                       </p>
                     </li>
@@ -413,7 +413,7 @@ export default function TermsAndConditions() {
             <div className="section">
               <h3 className="body-title">8. DISCLOSURES; DISCLAIMERS</h3>
               <p className="body-text">
-                amped.finance is an informational site for the AMP Protocol. amped.finance does not operate an exchange platform or
+                MjolnirX is an informational site for the AMP Protocol. MjolnirX does not operate an exchange platform or
                 offer trade execution or clearing services and has no oversight, involvement, or control concerning your
                 transactions using the Interface. All transactions between users of the Interface are executed
                 peer-to-peer directly between the users' blockchain addresses through a third-party developed
@@ -426,39 +426,39 @@ export default function TermsAndConditions() {
                 Contracts using the Interface.
               </p>
               <p className="body-text">
-                You understand that amped.finance is not registered or licensed by any regulatory agency or authority. No such
+                You understand that MjolnirX is not registered or licensed by any regulatory agency or authority. No such
                 agency or authority has reviewed or approved the use of the Site or the Interface.
               </p>
               <p className="body-text">
-                You agree that the Site and the Interface are provided on an "AS IS" and "AS AVAILABLE" basis. amped.finance
+                You agree that the Site and the Interface are provided on an "AS IS" and "AS AVAILABLE" basis. MjolnirX
                 makes no guarantees of any kind or connection with the Site or the Interface.
               </p>
             </div>
             <div className="section">
               <h3 className="body-title">9. LIMITATION OF LIABILITY</h3>
               <p className="body-text">
-                In no event shall amped.finance, its affiliates, its suppliers and contractors, and its affiliates', suppliers'
+                In no event shall MjolnirX, its affiliates, its suppliers and contractors, and its affiliates', suppliers'
                 and contractors' respective stockholders, members, directors, officers, managers, employees, attorneys,
                 agents, representatives, suppliers, and contractors shall be liable for any direct, indirect,
                 incidental, special, punitive, consequential or similar damages or liabilities whatsoever (including,
                 without limitation, damages for loss of fiat, assets, data, information, revenue, opportunities, use,
                 goodwill, profits or other business or financial benefit) arising out of or in connection with the Site
-                or the Interface, or other item provided by or on behalf of amped.finance, whether under contract, tort
+                or the Interface, or other item provided by or on behalf of MjolnirX, whether under contract, tort
                 (including negligence), civil liability, statute, strict liability, breach of warranties, or under any
                 other theory of liability, and whether or not we have been advised of, knew of or should have known of
                 the possibility of such damages and notwithstanding any failure of the essential purpose of these Terms
-                or any limited remedy hereunder nor is amped.finance in any way responsible for the execution or settlement of
+                or any limited remedy hereunder nor is MjolnirX in any way responsible for the execution or settlement of
                 transactions between users of the Interface.
               </p>
               <p className="body-text">
-                In no event shall amped.finance's aggregate liability arising out of or in connection with the Site or
+                In no event shall MjolnirX's aggregate liability arising out of or in connection with the Site or
                 Interface exceed one thousand Singapore Dollars (1,000.00 SGD).
               </p>
             </div>
             <div className="section">
               <h3 className="body-title">10. INDEMNIFICATION</h3>
               <p className="body-text">
-                You will defend, indemnify, and hold harmless amped.finance, its affiliates, members, member, managers,
+                You will defend, indemnify, and hold harmless MjolnirX, its affiliates, members, member, managers,
                 employees, attorneys, representatives, suppliers, and contractors from any claim, demand, lawsuit,
                 action, proceeding, investigation, liability, damage, loss, cost or expense, including without
                 limitation reasonable attorneys' fees, arising out of or relating to (a) your use of or conduct in
@@ -476,12 +476,12 @@ export default function TermsAndConditions() {
             <div className="section">
               <h3 className="body-title">11. DISPUTE RESOLUTION & ARBITRATION</h3>
               <p className="body-text">
-                amped.finance will use its best efforts to resolve potential disputes through informal, good faith
+                MjolnirX will use its best efforts to resolve potential disputes through informal, good faith
                 negotiations. If a potential dispute arises, you must contact us by sending a written notice of your
-                claim ("Notice") to amped.finance on any of our official channels. The notice must (a) describe the nature and
+                claim ("Notice") to MjolnirX on any of our official channels. The notice must (a) describe the nature and
                 basis of the claim and (b) set forth the specific relief sought. Our notice to you will be similar in
-                form to that described above. If you and amped.finance cannot reach an agreement to resolve the claim within
-                sixty (60) days of your email, then you and amped.finance agree to resolve the potential dispute according to
+                form to that described above. If you and MjolnirX cannot reach an agreement to resolve the claim within
+                sixty (60) days of your email, then you and MjolnirX agree to resolve the potential dispute according to
                 the process set forth below.
               </p>
               <p className="body-text">
@@ -497,7 +497,7 @@ export default function TermsAndConditions() {
               </p>
               <p className="body-text">
                 Any claim arising out of or related to these Terms or the Site or the Interface must be filed within one
-                year after such claim arose; otherwise, the claim is permanently barred, which means that you and amped.finance
+                year after such claim arose; otherwise, the claim is permanently barred, which means that you and MjolnirX
                 will not have the right to assert the claim.
               </p>
             </div>
@@ -514,9 +514,9 @@ export default function TermsAndConditions() {
               <ul className="list-style-none">
                 <li>
                   <p className="body-text">
-                    13.1. Any right or remedy of amped.finance set forth in these Terms is in addition to, and not in lieu of,
+                    13.1. Any right or remedy of MjolnirX set forth in these Terms is in addition to, and not in lieu of,
                     any other right or remedy whether described in these Terms, under Applicable Law, at law, or in
-                    equity. The failure or delay of amped.finance in exercising any right, power, or privilege under these
+                    equity. The failure or delay of MjolnirX in exercising any right, power, or privilege under these
                     Terms shall not operate as a waiver thereof.
                   </p>
                 </li>
@@ -535,7 +535,7 @@ export default function TermsAndConditions() {
                 </li>
                 <li>
                   <p className="body-text">
-                    13.4. amped.finance will have no responsibility or liability for any failure or delay in performance of the
+                    13.4. MjolnirX will have no responsibility or liability for any failure or delay in performance of the
                     Site or the Interface, or any loss or damage that you may incur, due to any circumstance or event
                     beyond our control, including without limitation any flood, extraordinary weather conditions,
                     earthquake, or other act of God, fire, war, insurrection, riot, labor dispute, accident, any law,
@@ -554,7 +554,7 @@ export default function TermsAndConditions() {
                 </li>
                 <li>
                   <p className="body-text">
-                    13.6. These Terms contain the entire agreement between you and amped.finance and supersede all prior and
+                    13.6. These Terms contain the entire agreement between you and MjolnirX and supersede all prior and
                     contemporaneous understandings between the parties regarding the Interface and the Site or the
                     Interface.
                   </p>
@@ -577,7 +577,7 @@ export default function TermsAndConditions() {
             <div className="section">
               <h3 className="body-title">CONTACT INFORMATION</h3>
               <p className="body-text">
-                If you have any questions about these Terms, the Site, or the Interface, please get in touch with amped.finance
+                If you have any questions about these Terms, the Site, or the Interface, please get in touch with MjolnirX
                 on any of our official channels.
               </p>
             </div>

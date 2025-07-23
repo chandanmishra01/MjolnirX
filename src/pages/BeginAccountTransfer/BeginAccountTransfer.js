@@ -249,9 +249,9 @@ export default function BeginAccountTransfer(props) {
           <Trans>
             Please only use this for full account transfers.
             <br />
-            This will transfer all your POE, esPOE, PLP and Multiplier Points to your new account.
+            This will transfer all your MJX, esMJX, MLP and Multiplier Points to your new account.
             <br />
-            Transfers are only supported if the receiving account has not staked POE or PLP tokens before.
+            Transfers are only supported if the receiving account has not staked MJX or MLP tokens before.
             <br />
             Transfers are one-way, you will not be able to transfer staked tokens back to the sending account.
           </Trans>
@@ -281,16 +281,16 @@ export default function BeginAccountTransfer(props) {
           </div>
           <div className="BeginAccountTransfer-validations">
             <ValidationRow isValid={!hasVestedAmp}>
-              <Trans>Sender has withdrawn all tokens from POE Vesting Vault</Trans>
+              <Trans>Sender has withdrawn all tokens from MJX Vesting Vault</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasVestedAlp}>
-              <Trans>Sender has withdrawn all tokens from PLP Vesting Vault</Trans>
+              <Trans>Sender has withdrawn all tokens from MLP Vesting Vault</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasStakedAmp}>
-              <Trans>Receiver has not staked POE tokens before</Trans>
+              <Trans>Receiver has not staked MJX tokens before</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasStakedAlp}>
-              <Trans>Receiver has not staked PLP tokens before</Trans>
+              <Trans>Receiver has not staked MLP tokens before</Trans>
             </ValidationRow>
           </div>
           <div className="input-row">

@@ -9,12 +9,12 @@ function PageOnPresale() {
   const homeUrl = getHomeUrl();
 
   return (
-    <SEO title={getPageTitle("Amped is on Presale")}>
+    <SEO title={getPageTitle("MjolnirX is on Presale")}>
       <div className="page-layout">
         <div className="page-not-found-container">
           <div className="page-not-found">
             <h2>
-              <Trans>Amped is currently available for pre-sale.</Trans>
+              <Trans>MjolnirX is currently available for pre-sale.</Trans>
             </h2>
             <p className="go-back">
               <Trans>

@@ -6,7 +6,7 @@ export const ARBITRUM = 42161;
 export const PEGASUS = 1891
 export const PHOENIX = 1890
 export const BSCTESTNET = 97
-export const PUPPYNET = 157
+export const PUPPYNET = 743111
 
 // TODO take it from web3
 export const DEFAULT_CHAIN_ID = PUPPYNET;
@@ -29,7 +29,7 @@ export const CHAIN_NAMES_MAP = {
   [PEGASUS]: "Pegasus",
   [PHOENIX]: "Phoenix",
   [BSCTESTNET]: "BSC Testnet",
-  [PUPPYNET]: "Puppynet Network",
+  [PUPPYNET]: "Hemi Sepolia",
 };
 
 export const GAS_PRICE_ADJUSTMENT_MAP = {
@@ -111,9 +111,9 @@ const constants = {
   },
 
   [PUPPYNET]: {
-    nativeTokenSymbol: "BONE",
-    wrappedTokenSymbol: "WBONE",
-    defaultCollateralSymbol: "USDT",
+    nativeTokenSymbol: "ETH",
+    wrappedTokenSymbol: "WETH",
+    defaultCollateralSymbol: "USDC",
     defaultFlagOrdersEnabled: true,
     positionReaderPropsLength: 9,
     v2: true,
@@ -163,7 +163,7 @@ export const BSC_TESTNET_RPC_PROVIDER = [
 ];
 
 export const PUPPYNET_RPC_PROVIDER = [
-  "https://puppynet.shibrpc.com/"
+  "https://testnet.rpc.hemi.network/rpc"
 ];
 
 export const RPC_PROVIDERS = {
@@ -218,10 +218,10 @@ export const NETWORK_METADATA = {
   },
   [PUPPYNET]: {
     chainId: "0x" + PUPPYNET.toString(16),
-    chainName: "Puppynet Network",
+    chainName: "Hemi Sepolia Network",
     nativeCurrency: {
-      name: "BONE",
-      symbol: "BONE",
+      name: "ETH",
+      symbol: "ETH",
       decimals: 18,
     },
     rpcUrls: PUPPYNET_RPC_PROVIDER,
@@ -273,9 +273,9 @@ export function getExplorerUrl(chainId) {
   } else if (chainId === BSCTESTNET) {
     return "https://testnet.bscscan.com/"
   } else if (chainId === PUPPYNET) {
-    return "https://puppyscan.shib.io/"
+    return "https://testnet.explorer.hemi.xyz/"
   }
-  return "https://puppyscan.shib.io/";
+  return "https://testnet.explorer.hemi.xyz";
 }
 
 export function getHighExecutionFee(chainId) {

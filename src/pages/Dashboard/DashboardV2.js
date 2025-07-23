@@ -252,7 +252,7 @@ export default function DashboardV2() {
   // const feesSummary = feesSummaryByChain[chainId];
   let eth
   if (chainId === PUPPYNET)
-    eth = infoTokens[getTokenBySymbol(chainId, "WBONE").address];
+    eth = infoTokens[getTokenBySymbol(chainId, "WETH").address];
   else 
     eth = infoTokens[getTokenBySymbol(chainId, "WETH").address];
 
@@ -389,7 +389,7 @@ export default function DashboardV2() {
                     <br />
                     Get lower fees to{" "}
                     <Link to="/buy_alp" target="_blank" rel="noopener noreferrer">
-                      buy PLP
+                      buy MLP
                     </Link>{" "}
                     with {tokenInfo.symbol},&nbsp; and to{" "}
                     <Link to="/trade" target="_blank" rel="noopener noreferrer">
@@ -557,7 +557,7 @@ export default function DashboardV2() {
                       handle={`$${formatAmount(tvl, USD_DECIMALS, 0, true)}`}
                       position="right-bottom"
                       renderContent={() => (
-                        <span>{t`Assets Under Management: POE staked (All chains) + PLP pool (${chainName})`}</span>
+                        <span>{t`Assets Under Management: MJX staked (All chains) + MLP pool (${chainName})`}</span>
                         // <div>{t`Assets Under Management: AMP staked (All chains) + ALP pool (${chainName})`}</div>
                       )}
                     />
@@ -565,13 +565,13 @@ export default function DashboardV2() {
                 </div>
                 <div className="App-card-row">
                   <div className="label">
-                    <Trans>PLP Pool</Trans>
+                    <Trans>MLP Pool</Trans>
                   </div>
                   <div>
                     <TooltipComponent
                       handle={`$${formatAmount(aum, USD_DECIMALS, 0, true)}`}
                       position="right-bottom"
-                      renderContent={() => <span>{t`Total value of tokens in PLP pool (${chainName})`}</span>}
+                      renderContent={() => <span>{t`Total value of tokens in MLP pool (${chainName})`}</span>}
                     />
                   </div>
                 </div>
@@ -748,7 +748,7 @@ export default function DashboardV2() {
               {chainId === PEGASUS && <img src={pegasus24Icon} alt="pegasus24Icon" width="50px" height="50px" />} */}
             </div>
             <div className="Page-description">
-              <Trans>Platform and PLP index tokens.</Trans>
+              <Trans>Platform and MLP index tokens.</Trans>
             </div>
           </div>
           <div className="DashboardV2-token-cards">
@@ -758,11 +758,11 @@ export default function DashboardV2() {
                   <div className="App-card-title">
                     <div className="App-card-title-mark">
                       <div className="App-card-title-mark-icon">
-                        <img src={poe40Icon} alt="POE Token Icon" width="35px" height="35px" />
+                        <img src={poe40Icon} alt="MJX Token Icon" width="35px" height="35px" />
                       </div>
                       <div className="App-card-title-mark-info">
-                        <div className="App-card-title-mark-title">POE</div>
-                        <div className="App-card-title-mark-subtitle">POE</div>
+                        <div className="App-card-title-mark-title">MJX</div>
+                        <div className="App-card-title-mark-subtitle">MJX</div>
                       </div>
                       <div>
                         <AssetDropdown assetSymbol="AMP" />
@@ -805,7 +805,7 @@ export default function DashboardV2() {
                       <div className="label">
                         <Trans>Supply</Trans>
                       </div>
-                      <div>{formatAmount(totalAmpSupply, AMP_DECIMALS, 0, true)} POE</div>
+                      <div>{formatAmount(totalAmpSupply, AMP_DECIMALS, 0, true)} MJX</div>
                     </div>
                     <div className="App-card-row">
                       <div className="label">
@@ -895,8 +895,8 @@ export default function DashboardV2() {
                         )} */}
                       </div>
                       <div className="App-card-title-mark-info">
-                        <div className="App-card-title-mark-title">PLP</div>
-                        <div className="App-card-title-mark-subtitle">PLP</div>
+                        <div className="App-card-title-mark-title">MLP</div>
+                        <div className="App-card-title-mark-subtitle">MLP</div>
                       </div>
                       <div>
                         <AssetDropdown assetSymbol="ALP" />
@@ -915,7 +915,7 @@ export default function DashboardV2() {
                       <div className="label">
                         <Trans>Supply</Trans>
                       </div>
-                      <div>{formatAmount(alpSupply, ALP_DECIMALS, 0, true)} PLP</div>
+                      <div>{formatAmount(alpSupply, ALP_DECIMALS, 0, true)} MLP</div>
                     </div>
                     <div className="App-card-row">
                       <div className="label">
@@ -972,7 +972,7 @@ export default function DashboardV2() {
                         ))}
                       </Pie>
                       <text x={"50%"} y={"50%"} fill="white" textAnchor="middle" dominantBaseline="middle">
-                        PLP Pool
+                        MLP Pool
                       </text>
                       <Tooltip content={<CustomTooltip />} />
                     </PieChart>
@@ -982,7 +982,7 @@ export default function DashboardV2() {
             </div>
             <div className="token-table-wrapper App-card">
               <div className="App-card-title font-kufam">
-                <Trans>PLP Index Composition</Trans>{" "}
+                <Trans>MLP Index Composition</Trans>{" "}
                 {/* {chainId === ARBITRUM && <img src={arbitrum16Icon} alt={t`Arbitrum Icon`} />}
                 {chainId === PEGASUS && <img src={pegasus16Icon} alt={t`Pegasus Icon`} />} */}
               </div>
